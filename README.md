@@ -13,6 +13,7 @@
 - `sub-convert`文件夹：节点转换器搭建脚本，示例：<https://csub.yutian81.top>
 - `shortlink`文件夹：生成短链接的脚本，示例：<https://slink.yutian81.top/duanlian>
 - `GithubRaw`文件夹：从Github私有库获取直链地址
+  - 在直链前加前缀`https://github.yutian81.top/`
 
 ## 节点转换器搭建
 - 不良林节点转换器前端：<https://psub.888005.xyz>，[不良林教程](https://github.com/bulianglin/psub)
