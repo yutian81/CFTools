@@ -3,8 +3,9 @@
 
 ## 文件说明
 - `speedtest`文件夹：测速地址搭建脚本
-  - 自建测速链接地址：示例：`https://cesu.yutian81.top/100m`，默认为200M
+  - 自建测速链接地址示例：`https://cesu.yutian81.top/100m`，默认为200M
   - mingyu大佬提供测速地址：`https://spurl.api.030101.xyz/100mb`。[参数说明](https://spurl.api.030101.xyz/)
+  - nekobox官方测速地址：`http://cachefly.cachefly.net/100mb.test`
   - 测速地址用于`CloudflareSpeedTest`工具，[项目地址](https://github.com/XIU2/CloudflareSpeedTest)
 
 - `iplook`文件夹：显示本机外网IP地区和运营商的搭建脚本，示例：<https://ip.yutian81.top/>
