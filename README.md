@@ -5,15 +5,22 @@
 - `speedtest`文件夹：测速地址搭建脚本
   - 自建测速链接地址：示例：`https://cesu.yutian81.top/100m`，默认为200M
   - mingyu大佬提供测速地址：`https://spurl.api.030101.xyz/100mb`。[参数说明](https://spurl.api.030101.xyz/)
-  - 测速地址用于`CloudflareSpeedTest`工具，[项目地址](https://github.com/XIU2/CloudflareSpeedTest)  
+  - 测速地址用于`CloudflareSpeedTest`工具，[项目地址](https://github.com/XIU2/CloudflareSpeedTest)
+
 - `iplook`文件夹：显示本机外网IP地区和运营商的搭建脚本，示例：<https://ip.yutian81.top/>
+
 - `GPT-RPoroxy`文件夹：在CF中反向代理自行部署chatgpt的脚本
   - 脚本来自CMLiu大佬；自行部署chatgpt[项目地址](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
+
 - `CFcdn-proxy`文件夹：将任意域名通过CF进行反代
+
 - `sub-convert`文件夹：节点转换器搭建脚本，示例：<https://csub.yutian81.top>
+
 - `shortlink`文件夹：生成短链接的脚本，示例：<https://slink.yutian81.top/duanlian>
+
 - `GithubRaw`文件夹：从Github私有库获取直链地址
   - 在直链前加前缀`https://github.yutian81.top/`
+
 
 ## 节点转换器搭建
 - 不良林节点转换器前端：<https://psub.888005.xyz>，[不良林教程](https://github.com/bulianglin/psub)
