@@ -9,6 +9,7 @@
 - `iplook`文件夹：显示本机外网IP地区和运营商的搭建脚本，示例：<https://ip.yutian81.top/>
 - `GPT-RPoroxy`文件夹：在CF中反向代理自行部署chatgpt的脚本
   - 脚本来自CMLiu大佬；自行部署chatgpt[项目地址](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
+- `CFcdn-proxy`文件夹：将任意域名通过CF进行反代
 - `sub-convert`文件夹：节点转换器搭建脚本，示例：<https://csub.yutian81.top>
 - `shortlink`文件夹：生成短链接的脚本，示例：<https://slink.yutian81.top/duanlian>  
 
