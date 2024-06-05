@@ -3,19 +3,19 @@
 
 ## 文件说明
 - `speedtest`文件夹：测速地址搭建脚本
-  - 自建测速链接地址：`https://cesu.yutian81.top/100m`，默认为200M
+  - 自建测速链接地址：示例：`https://cesu.yutian81.top/100m`，默认为200M
   - mingyu大佬提供测速地址：`https://spurl.api.030101.xyz/100mb`。[参数说明](https://spurl.api.030101.xyz/)
   - 测速地址用于`CloudflareSpeedTest`工具，[项目地址](https://github.com/XIU2/CloudflareSpeedTest)  
-- `iplook`文件夹：显示本机外网IP地区和运营商的搭建脚本
-  - 自建IP地址显示网址：<https://ip.yutian81.top/>  
+- `iplook`文件夹：显示本机外网IP地区和运营商的搭建脚本，示例：<https://ip.yutian81.top/>
 - `GPT-RPoroxy`文件夹：在CF中反向代理自行部署chatgpt的脚本
   - 脚本来自CMLiu大佬；自行部署chatgpt[项目地址](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
-- `sub-convert`文件夹：节点转换器搭建脚本
+- `sub-convert`文件夹：节点转换器搭建脚本，示例：<https://csub.yutian81.top>
+- `shortlink`文件夹：生成短链接的脚本，示例：<https://slink.yutian81.top/duanlian>  
 
 ## 节点转换器搭建
 - 不良林节点转换器前端：<https://psub.888005.xyz>，[不良林教程](https://github.com/bulianglin/psub)
-- 自建节点转换器前端：<https://csub.yutian81.top>
-- 自建节点转换器后端：`csub.yutian81.top?sub`
+- 大佬的订阅转换器后端：肥羊 `sub.v1.mk`
+- 自建节点转换器前端：<https://csub.yutian81.top>；后端：`csub.yutian81.top?sub`
 - 订阅转换器配置文件（来自A4大佬）：
   - 带负载均衡完整版
   ```ini
