@@ -7,7 +7,7 @@ https://psub.888005.xyz
 https://youtu.be/X7CC5jrgazo  
 - 创建worker，复制代码`_workers.js`，命名为`csub`，保存并部署  
 - 创建KV空间，命名为`csub或其他`  
-- 设置worker环境变量：`BACKEND`  https://api.v1.mk  
+- 设置worker环境变量：`BACKEND`  https://sub.v1.mk  
 - 给worker绑定KV空间或R2存储桶：变量：`SUB_BUCKET`  csub
 - worker地址即为订阅转换器地址，可绑定自定义域名使用
 - 最终得到订阅转换器后端地址：`csub.yutian81.top/sub?`，在其他人的转换器前端网页中填入这个地址  
