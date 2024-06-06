@@ -43,17 +43,21 @@
   - 需要先下载[本地转换工具](https://github.com/tindy2013/subconverter/releases)  
 
 ## 订阅转换器配置文件（来自A4大佬）：
-### 带负载均衡完整版
+- A4带负载均衡完整版，[项目地址](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)
 ```ini
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini
+https://ghproxy.net/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini
 ```
-### 带负载均衡精简版
+- A4带负载均衡精简版，[项目地址](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)
 ```ini
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini
+https://ghproxy.net/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini
 ```
-### 支持warp节点分流
-```ini
-https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode_WARP.ini
+- CM负载均衡不带warp分流完整版，[项目地址](https://github.com/cmliu/ACL4SSR/tree/main/Clash/config)
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini
+```
+- CM负载均衡带warp分流完整版，[项目地址](https://github.com/cmliu/ACL4SSR/tree/main/Clash/config)
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode_WARP.ini
 ```
 
 ## 两个一周免费节点申请网站  
