@@ -1,0 +1,2 @@
+### 在下面的代码中填入优选的IP和端口，即可作为singbox节点
+https://api.yebekhe.link/warp?key=&device_name=WARP+&singbox=true&ip=优选ip&port=端口

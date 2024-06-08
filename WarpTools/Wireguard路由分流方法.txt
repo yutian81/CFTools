@@ -1,0 +1,20 @@
+1、项目地址
+https://github.com/lmc999/auto-add-routes
+2、安装 Wireguard
+假定安装路径为 "C:\Program Files\WireGuard"
+3、开启Wireguard的Pre/Post命令支持，导入注册表
+reg add HKLM\Software\WireGuard /v DangerousScriptExecution /t REG_DWORD /d 1 /f
+4、下载github项目中的所有文件到 "C:\Program Files\WireGuard\bat" 文件夹
+5、修改Wireguard客户端配置文件，加入以下Script Hook调用"C:\Program Files\WireGuard\bat"的批处理文件
+PreUp = "C:\Program Files\WireGuard\bat\routes-up.bat"
+PostUp = "C:\Program Files\WireGuard\bat\dns-up.bat"
+PreDown = "C:\Program Files\WireGuard\bat\routes-down.bat"
+PostDown = "C:\Program Files\WireGuard\bat\dns-down.bat"
+6、将DNS指向本机以使用Overture作为DNS服务器
+DNS = 127.0.0.1
+7、取消勾选“拦截未经隧道的流量”，保存
+8、如配置正确，此时点击连接Wireguard会
+⑴自动调用routes-up.bat将国内IP写进系统路由表，
+⑵启动overture DNS服务器
+9、连接成功后可上ip.skk.moe测试一下看是否正确分流。
+

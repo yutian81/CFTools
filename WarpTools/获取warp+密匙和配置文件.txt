@@ -1,0 +1,22 @@
+1、打开WARP+优选IP工具文件夹，运行“手动方式1.bat”
+2、将生成结果中的IP和端口填入“Hiddify节点套用代码.txt”中的第 75、76行，替换“优选IP”和“优选端口”，获得Hiddify节点信息
+3、将生成结果中的IP和端口填入“singbox节点套用代码.txt”中的“优选IP”和“端口”，获得singbox节点信息
+4、v2rayng使用warp+配置按一下方法生成。再运行warp+优选IP，在v2rayng客户端中填入优选IP，PrivateKey 和 PublicKey，以及 Address （ipv4,ipv6），即可连接。落地ip为本地网络所在地，即中国。
+进入 https://replit.com/@yutian88881/WarpKey  运行 run
+或进入TG  Warp Plus Bot 获取一个密钥
+得到  6AQ4B5L8-QJ214s5k-7E5DA01d
+进入 https://replit.com/@yutian88881/WARPconfig  运行run
+选择 2，回车；再选择 2 ，回车
+填入上面得到的密钥，回车，获得私匙和公匙：PrivateKey 和 PublicKey
+得到 warp+ 配置文件和二维码，复制
+PrivateKey = MDgH+IzJtI36JKMhE0yK54i3GeimSG/UN4DJbMhHPlA=
+Address = 172.16.0.2/32
+Address = 2606:4700:110:8e01:8c3d:ac5d:6890:5b14/128
+DNS = 1.1.1.1
+MTU = 1280
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+AllowedIPs = 0.0.0.0/0
+AllowedIPs = ::/0
+Endpoint = 162.159.193.10:2408
+
