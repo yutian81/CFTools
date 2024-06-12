@@ -20,7 +20,7 @@
 
 ### webssh的github项目
 带`ssh link`功能的：<https://github.com/crazypeace/huashengdun-webssh>
-  - 缺点：不带`sftp`功能
+  - 缺点：不带`sftp`功能  
 带简易`sftp`（支持上传下载）功能的：<https://github.com/Jrohy/webssh>
   - 缺点：不带私钥登录功能
 
