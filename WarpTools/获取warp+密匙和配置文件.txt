@@ -8,15 +8,18 @@
 进入 https://replit.com/@yutian88881/WARPconfig  运行run
 选择 2，回车；再选择 2 ，回车
 填入上面得到的密钥，回车，获得私匙和公匙：PrivateKey 和 PublicKey
-得到 warp+ 配置文件和二维码，复制
+得到 warp+ 配置文件和二维码，复制以下代码，修改“PrivateKey”和“Endpoint”  
+粘贴到 WireGuard 客户端即可
+
+[Interface]
 PrivateKey = MDgH+IzJtI36JKMhE0yK54i3GeimSG/UN4DJbMhHPlA=
 Address = 172.16.0.2/32
 Address = 2606:4700:110:8e01:8c3d:ac5d:6890:5b14/128
 DNS = 1.1.1.1
 MTU = 1280
+
 [Peer]
 PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
 AllowedIPs = 0.0.0.0/0
 AllowedIPs = ::/0
 Endpoint = 162.159.193.10:2408
-
