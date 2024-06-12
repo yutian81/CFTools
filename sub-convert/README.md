@@ -10,7 +10,7 @@ https://youtu.be/X7CC5jrgazo
 - 设置worker环境变量：`BACKEND`  https://sub.v1.mk  
 - 给worker绑定KV空间或R2存储桶：变量：`SUB_BUCKET`  csub
 - worker地址即为订阅转换器地址，可绑定自定义域名使用
-- 最终得到订阅转换器后端地址：`csub.yutian81.top/sub?`，在其他人的转换器前端网页中填入这个地址  
+- 最终得到订阅转换器后端地址：`https://csub.yutian81.top/sub?`，在其他人的转换器前端网页中填入这个地址  
 - 也可直接访问 [自己搭建的订阅转换器前端](https://csub.yutian81.top)
 ## 支持反代转换的协议
 - shadowsocks  
