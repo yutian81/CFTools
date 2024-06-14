@@ -4,7 +4,7 @@
 此处只收录 workers 脚本及部署方法。上传文件最大限制为25M
 
 ### 项目一：https://github.com/SharzyL/pastebin-worker
-代码：`_workers.js`，可分享小文件和剪贴板，还可作为短链接
+代码：`_workers.zip`，可分享小文件和剪贴板，还可作为短链接
 
 示例：https://shz.al/
 
@@ -14,7 +14,7 @@
 - 部署，并绑定一个自定义域（中国大陆地区必须绑定）
 
 ### 项目二：https://github.com/yllhwa/FileWorker
-代码：`_workers1.js`，轻量级的文件管理和在线剪贴板
+只能使用`pages`部署，部署方法：
 
 创建 R2 存储桶  
 - Cloudflare DashBoard -> R2 -> Create Bucket
