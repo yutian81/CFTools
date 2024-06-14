@@ -31,7 +31,7 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 
 - gist：https://gist.githubusercontent.com/cielpy/351557e6e465c12986419ac5a4dd2568/raw/cmd.py
 
-## cf worker版本部署
+## 此处只有 cf worker 版本部署
 
 首页：https://workers.cloudflare.com
 
@@ -41,7 +41,7 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 
 `ASSET_URL`是静态资源的url（实际上就是现在显示出来的那个输入框单页面）
 
-`PREFIX`是前缀，默认（根路径情况为"/"），如果自定义路由为example.com/gh/*，请将PREFIX改为 '/gh/'，注意，少一个杠都会错！
+`PREFIX`是前缀，默认（根路径情况为"/"），如果自定义路由为example.com/gh/*，请将PREFIX改为 `/gh/`，注意，少一个杠都会错！
 
 ## Python和docker版本部署
 
