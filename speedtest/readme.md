@@ -5,6 +5,8 @@
 ## MINGYU大佬的IP测速项目
 https://spurl.api.030101.xyz   
 用于`CloudflareSpeedTest`工具测速，[项目地址](https://github.com/XIU2/CloudflareSpeedTest)  
+另一个测速工具`Cloudflare-IP-SpeedTest`，[项目地址](https://github.com/badafans/Cloudflare-IP-SpeedTest)  
+
 ## 如何使用
 您可以通过以下不同的格式来指定下载文件的大小：  
 
