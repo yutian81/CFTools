@@ -3,11 +3,14 @@
 ## 简介
 
 github release、archive以及项目文件的加速项目，支持clone，有Cloudflare Workers无服务器版本以及Python版本  
-项目地址：https://github.com/hunshcn/gh-proxy
+项目地址1：https://github.com/hunshcn/gh-proxy  
+项目地址2：https://github.com/crazypeace/gh-proxy  
 
 ## 演示
 
-[https://gh.api.99988866.xyz/](https://gh.api.99988866.xyz/)
+https://gh.api.99988866.xyz/  
+
+https://ghproxy.agrayman.gay/
 
 ## 使用
 
