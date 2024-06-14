@@ -9,7 +9,7 @@
 示例：https://shz.al/
 
 - 创建一个`KV`命名空间，记住其名称
-- 创建一个`workers`，复制代码`_workers.js`并按需修改
+- 创建一个`workers`，上传压缩包`_workers.zip`
 - 将`workers`项目与`KV`命名空间绑定
 - 部署，并绑定一个自定义域（中国大陆地区必须绑定）
 
