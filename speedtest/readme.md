@@ -1,6 +1,7 @@
 ## 测速文件
 来源：https://t.me/cloudflareorg  
-自行部署脚本：本文件夹内`_workers.js`
+自行部署脚本：本文件夹内`_workers.js`  
+自建测速地址demo：`https://cesu.yutian81.top/100m`  
 
 ## MINGYU大佬的IP测速项目
 https://spurl.api.030101.xyz   
@@ -16,7 +17,7 @@ https://spurl.api.030101.xyz
 要下载指定千兆字节（GB）为单位，请使用格式：spurl.api.030101.xyz/数字gb  
 
 ## 示例  
-要下载 10000 字节：https://spurl.api.030101.xyz/10000  
-要下载 10 千字节：https://spurl.api.030101.xyz/10kb  
-要下载 100 兆字节：https://spurl.api.030101.xyz/100mb  
-要下载 1 千兆字节：https://spurl.api.030101.xyz/1gb  
+要下载 10000 字节：`https://spurl.api.030101.xyz/10000`  
+要下载 10 千字节：`https://spurl.api.030101.xyz/10kb`  
+要下载 100 兆字节：`https://spurl.api.030101.xyz/100mb`  
+要下载 1 千兆字节：`https://spurl.api.030101.xyz/1gb`  
