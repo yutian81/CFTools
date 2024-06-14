@@ -22,8 +22,8 @@ Google Drive Directory Index
   - 按照https://rclone.org/drive/绑定驱动器
   - 执行命令 rclone config file 查找文件 rclone.conf 路径
   - 打开 rclone.conf ，找到配置 root_folder_id 和 refresh_token
-  - 在https://github.com/donwa/goindex下载index.js并填写root和refresh_token
-在https://github.com/donwa/goindex下载index.js并填写root和refresh_token  
+  - 在https://github.com/donwa/goindex下载index.js并填写root和refresh_token  
+在https://github.com/donwa/goindex下载index.js并填写`client_id`、`client_secret`、`refresh_token`     
 将代码部署到 Cloudflare Workers  
 
 ## 修改版
