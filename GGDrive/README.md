@@ -19,8 +19,8 @@ Google Drive Directory Index
 ## 手动部署
 打开 Google 云端硬盘 API  
 创建 OAuth 客户端 ID  
-本地安装rclone软件，使用 rclone 获取 refresh_token   
-  - 按照https://rclone.org/drive/绑定驱动器
+本地安装[rclone软件](https://rclone.org/)，使用 rclone 获取 refresh_token   
+  - 按照<https://rclone.org/drive>的引导绑定谷歌驱动器
   - 执行命令 rclone config file 查找文件 rclone.conf 路径
   - 打开 rclone.conf ，找到配置 root_folder_id 和 refresh_token
 在`index.js`中填写`client_id`、`client_secret`、`refresh_token`、`root_folder_id`     
