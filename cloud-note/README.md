@@ -10,6 +10,9 @@
 
 基于 Cloudflare Worker 实现，轻松实现私有化部署。
 
+## 原项目
+https://github.com/s0urcelab/serverless-cloud-notepad/tree/master  
+
 ## ✨ 功能
 
 - ✏ 无需登录/注册, 即刻开始书写
