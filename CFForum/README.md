@@ -1,5 +1,3 @@
-
-
 鉴于现在的主机论很难玩又融入奇特化
 发布这个新的创新选择小玩具
 
@@ -8,7 +6,7 @@
 ![](https://s2.loli.net/2024/03/23/hwsAiFReH3S8GEx.png)
 
 地址：https://locnode.com  
-仓库: https://github.com/minlearn/locnode  
+原项目仓库: https://github.com/minlearn/locnode  
 
 ## 安装
 
