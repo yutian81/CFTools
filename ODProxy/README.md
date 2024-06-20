@@ -6,5 +6,5 @@
 
 ### 项目二：https://github.com/Eggsmemory/OneDrive-Index-Cloudflare-Worker-Cht
 压缩包：`_workers2.zip`  
-使用教程：https://github.com/Eggsmemory/OneDrive-Index-Cloudflare-Worker-Cht/blob/master/readme.md
+使用教程：https://github.com/Eggsmemory/OneDrive-Index-Cloudflare-Worker-Cht/blob/master/readme.md  
 支持上传，可以当做图床和博客使用
