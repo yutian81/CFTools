@@ -1,3 +1,5 @@
+[原项目地址](https://github.com/ccbikai/cloudflare-worker-image)
+
 # Cloudflare Worker Image
 
 使用 Cloudflare Worker 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
