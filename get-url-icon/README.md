@@ -1,4 +1,6 @@
-# Get the favicon from every URL by utilizing Cloudflare Workers
+[原项目地址](https://github.com/ccbikai/favicon)
+
+# 利用Cloudflare Workers从任意URL获取图标
 
 ## Demo
 
