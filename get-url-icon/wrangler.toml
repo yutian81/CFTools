@@ -1,0 +1,7 @@
+name = "favicon"
+main = "index.js"
+
+compatibility_date = "2024-06-01"
+
+workers_dev = true
+upload_source_maps = true

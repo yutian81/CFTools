@@ -1,0 +1,17 @@
+{
+  "name": "favicon-worker",
+  "version": "1.0.0",
+  "description": "Get the favicon of a URL",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write '**/*.{js,css,json,md}'",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "author": "Tobias Lins <me@tobi.sh>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "wrangler": "^3.58.0"
+  }
+}
