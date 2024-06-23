@@ -14,6 +14,7 @@ https://youtu.be/X7CC5jrgazo
 - worker地址即为订阅转换器地址，可绑定自定义域名使用
 - 最终得到订阅转换器后端地址：`https://csub.yutian81.top/sub?`，在其他人的转换器前端网页中填入这个地址  
 - 也可直接访问 [自己搭建的订阅转换器前端](https://csub.yutian81.top)
+- CMliu的转换器后端：subapi.fxxk.dedyn.io
 
 ## 支持反代转换的协议
 - shadowsocks  
