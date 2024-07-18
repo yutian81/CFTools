@@ -60,7 +60,3 @@ https://ghproxy.net/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/c
 ```
 https://ghproxy.net/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode_WARP.ini
 ```
-
-## 两个一周免费节点申请网站  
-- <https://howdy.id/xray-vmess-vless-trojan>  
-- <https://www.fastssh.com/page/v2ray-servers>  
