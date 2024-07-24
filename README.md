@@ -8,9 +8,11 @@
 - nekobox官方测速地址：`http://cachefly.cachefly.net/100mb.test`
 - 测速地址用于`CloudflareSpeedTest`工具，[项目地址](https://github.com/XIU2/CloudflareSpeedTest)
 - 其他测速地址
-  * https://cf-speedtest.acfun.win/100mb.test
-  * https://down.heleguo.top/download/100MB.zip
-  * https://speed.cloudflare.com/__down?bytes=200000000
+ ```
+ https://cf-speedtest.acfun.win/100mb.test
+ https://down.heleguo.top/download/100MB.zip
+ https://speed.cloudflare.com/__down?bytes=100000000
+ ```
 
 ###  `iplook`文件夹：显示本机外网IP地区和运营商
 - 示例：<https://ip.yutian81.top/>
