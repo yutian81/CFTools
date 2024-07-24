@@ -1,0 +1,2512 @@
+[
+    {
+        "iata": "TIA",
+        "lat": 41.4146995544,
+        "lon": 19.7206001282,
+		"country": "阿尔巴尼亚",
+        "cca2": "AL",
+        "region": "欧洲",
+        "city": "地拉那"
+    },
+    {
+        "iata": "KHN",
+        "lat": 41.4146995544,
+        "lon": 19.7206001282,
+		"country": "中国",
+        "cca2": "CN",
+        "region": "亚洲",
+        "city": "南昌"
+    },
+    {
+        "iata": "ALG",
+        "lat": 36.6910018921,
+        "lon": 3.2154099941,
+        "country": "阿尔及利亚",
+		"cca2": "DZ",
+        "region": "非洲",
+        "city": "阿尔及尔"
+    },
+    {
+        "iata": "ORN",
+        "lat": 35.6911,
+        "lon": -0.6416,
+		"country": "阿尔及利亚",
+        "cca2": "DZ",
+        "region": "非洲",
+        "city": "奥兰"
+    },
+    {
+        "iata": "LAD",
+        "lat": -8.8583698273,
+        "lon": 13.2312002182,
+		"country": "安哥拉",
+        "cca2": "AO",
+        "region": "非洲",
+        "city": "罗安达"
+    },
+    {
+        "iata": "EZE",
+        "lat": -34.8222,
+        "lon": -58.5358,
+		"country": "阿根廷",
+        "cca2": "AR",
+        "region": "南美",
+        "city": "布宜诺斯艾利斯"
+    },
+    {
+        "iata": "COR",
+        "lat": -31.31,
+        "lon": -64.208333,
+		"country": "阿根廷",
+        "cca2": "AR",
+        "region": "南美",
+        "city": "科尔多瓦"
+    },
+    {
+        "iata": "NQN",
+        "lat": -38.9490013123,
+        "lon": -68.1557006836,
+		"country": "阿根廷",
+        "cca2": "AR",
+        "region": "南美",
+        "city": "内乌肯"
+    },
+    {
+        "iata": "EVN",
+        "lat": 40.1473007202,
+        "lon": 44.3959007263,
+		"country": "亚美尼亚",
+        "cca2": "AM",
+        "region": "中东",
+        "city": "埃里温"
+    },
+    {
+        "iata": "ADL",
+        "lat": -34.9431729,
+        "lon": 138.5335637,
+		"country": "澳大利亚",
+        "cca2": "AU",
+        "region": "大洋洲",
+        "city": "阿德莱德"
+    },
+    {
+        "iata": "BNE",
+        "lat": -27.3841991425,
+        "lon": 153.117004394,
+		"country": "澳大利亚",
+        "cca2": "AU",
+        "region": "大洋洲",
+        "city": "布里斯班"
+    },
+    {
+        "iata": "CBR",
+        "lat": -35.3069000244,
+        "lon": 149.1950073242,
+		"country": "澳大利亚",
+        "cca2": "AU",
+        "region": "大洋洲",
+        "city": "堪培拉"
+    },
+    {
+        "iata": "HBA",
+        "lat": -42.883209,
+        "lon": 147.331665,
+		"country": "澳大利亚",
+        "cca2": "AU",
+        "region": "大洋洲",
+        "city": "霍巴特"
+    },
+    {
+        "iata": "MEL",
+        "lat": -37.6733016968,
+        "lon": 144.843002319,
+		"country": "澳大利亚",
+        "cca2": "AU",
+        "region": "大洋洲",
+        "city": "墨尔本"
+    },
+    {
+        "iata": "PER",
+        "lat": -31.9402999878,
+        "lon": 115.967002869,
+		"country": "澳大利亚",
+        "cca2": "AU",
+        "region": "大洋洲",
+        "city": "珀斯"
+    },
+    {
+        "iata": "SYD",
+        "lat": -33.9460983276,
+        "lon": 151.177001953,
+		"country": "澳大利亚",
+        "cca2": "AU",
+        "region": "大洋洲",
+        "city": "悉尼"
+    },
+    {
+        "iata": "VIE",
+        "lat": 48.1102981567,
+        "lon": 16.5697002411,
+		"country": "奥地利",
+        "cca2": "AT",
+        "region": "欧洲",
+        "city": "维也纳"
+    },
+    {
+        "iata": "LLK",
+        "lat": 38.7463989258,
+        "lon": 48.8180007935,
+		"country": "阿塞拜疆",
+        "cca2": "AZ",
+        "region": "中东",
+        "city": "Astara"
+    },
+    {
+        "iata": "GYD",
+        "lat": 40.4674987793,
+        "lon": 50.0466995239,
+		"country": "阿塞拜疆",
+        "cca2": "AZ",
+        "region": "中东",
+        "city": "巴库"
+    },
+    {
+        "iata": "BAH",
+        "lat": 26.2707996368,
+        "lon": 50.6335983276,
+		"country": "巴林",
+        "cca2": "BH",
+        "region": "中东",
+        "city": "麦纳麦"
+    },
+    {
+        "iata": "CGP",
+        "lat": 22.2495995,
+        "lon": 91.8133011,
+		"country": "孟加拉国",
+        "cca2": "BD",
+        "region": "亚太",
+        "city": "吉大港"
+    },
+    {
+        "iata": "DAC",
+        "lat": 23.843347,
+        "lon": 90.397783,
+		"country": "孟加拉国",
+        "cca2": "BD",
+        "region": "亚太",
+        "city": "达卡"
+    },
+    {
+        "iata": "JSR",
+        "lat": 23.1837997437,
+        "lon": 89.1607971191,
+		"country": "孟加拉国",
+        "cca2": "BD",
+        "region": "亚太",
+        "city": "杰索尔"
+    },
+    {
+        "iata": "MSQ",
+        "lat": 53.9006,
+        "lon": 27.599,
+		"country": "白俄罗斯",
+        "cca2": "BY",
+        "region": "欧洲",
+        "city": "明斯克"
+    },
+    {
+        "iata": "BRU",
+        "lat": 50.9014015198,
+        "lon": 4.4844398499,
+		"country": "比利时",
+        "cca2": "BE",
+        "region": "欧洲",
+        "city": "布鲁塞尔"
+    },
+    {
+        "iata": "PBH",
+        "lat": 27.4712,
+        "lon": 89.6339,
+		"country": "不丹",
+        "cca2": "BT",
+        "region": "亚太",
+        "city": "廷布"
+    },
+    {
+        "iata": "GBE",
+        "lat": -24.6282,
+        "lon": 25.9231,
+		"country": "不丹",
+        "cca2": "BW",
+        "region": "非洲",
+        "city": "博茨瓦纳"
+    },
+    {
+        "iata": "QWJ",
+        "lat": -22.738,
+        "lon": -47.334,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "亚美利加纳"
+    },
+    {
+        "iata": "BEL",
+        "lat": -1.4563,
+        "lon": -48.5013,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "贝伦"
+    },
+    {
+        "iata": "CNF",
+        "lat": -19.624444,
+        "lon": -43.971944,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "贝洛奥里宗特"
+    },
+    {
+        "iata": "BNU",
+        "lat": -26.89245,
+        "lon": -49.07696,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "布鲁梅瑙"
+    },
+    {
+        "iata": "BSB",
+        "lat": -15.79824,
+        "lon": -47.90859,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "利亚"
+    },
+    {
+        "iata": "CFC",
+        "lat": -26.7762,
+        "lon": -51.0125,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "卡萨多尔"
+    },
+    {
+        "iata": "VCP",
+        "lat": -22.90662,
+        "lon": -47.08576,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "坎皮纳斯"
+    },
+    {
+        "iata": "CAW",
+        "lat": -21.698299408,
+        "lon": -41.301700592,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "坎普斯"
+    },
+    {
+        "iata": "CGB",
+        "lat": -15.59611,
+        "lon": -56.09667,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "库亚巴"
+    },
+    {
+        "iata": "CWB",
+        "lat": -25.5284996033,
+        "lon": -49.1758003235,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "库里蒂巴"
+    },
+    {
+        "iata": "FLN",
+        "lat": -27.6702785492,
+        "lon": -48.5525016785,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "弗洛里亚诺波利斯"
+    },
+    {
+        "iata": "FOR",
+        "lat": -3.7762799263,
+        "lon": -38.5326004028,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "福塔莱萨"
+    },
+    {
+        "iata": "GYN",
+        "lat": -16.69727,
+        "lon": -49.26851,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "戈亚尼亚"
+    },
+    {
+        "iata": "ITJ",
+        "lat": -27.6116676331,
+        "lon": -48.6727790833,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "伊塔雅伊"
+    },
+    {
+        "iata": "JOI",
+        "lat": -26.304408,
+        "lon": -48.846383,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "若茵维莱"
+    },
+    {
+        "iata": "JDO",
+        "lat": -7.2242,
+        "lon": -39.313,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "北茹阿泽鲁"
+    },
+    {
+        "iata": "MAO",
+        "lat": -3.11286,
+        "lon": -60.01949,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "马瑙斯"
+    },
+    {
+        "iata": "POA",
+        "lat": -29.9944000244,
+        "lon": -51.1713981628,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "阿雷格里港"
+    },
+    {
+        "iata": "REC",
+        "lat": -8.1264896393,
+        "lon": -34.9235992432,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "累西腓"
+    },
+    {
+        "iata": "RAO",
+        "lat": -21.1363887787,
+        "lon": -47.7766685486,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "里贝朗普雷图"
+    },
+    {
+        "iata": "GIG",
+        "lat": -22.8099994659,
+        "lon": -43.2505569458,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "里约热内卢"
+    },
+    {
+        "iata": "SSA",
+        "lat": -12.9086112976,
+        "lon": -38.3224983215,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "萨尔瓦多"
+    },
+    {
+        "iata": "SJP",
+        "lat": -20.807157,
+        "lon": -49.378994,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "圣若泽"
+    },
+    {
+        "iata": "SJK",
+        "lat": -23.1791,
+        "lon": -45.8872,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "圣若泽杜斯坎普斯"
+    },
+    {
+        "iata": "GRU",
+        "lat": -23.4355564117,
+        "lon": -46.4730567932,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "圣保罗"
+    },
+    {
+        "iata": "SOD",
+        "lat": -23.54389,
+        "lon": -46.63445,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "索罗卡巴"
+    },
+    {
+        "iata": "NVT",
+        "lat": -26.8251,
+        "lon": -49.2695,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "圣卡塔琳娜"
+    },
+    {
+        "iata": "UDI",
+        "lat": -18.8836116791,
+        "lon": -48.225276947,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "乌贝兰迪亚"
+    },
+    {
+        "iata": "VIX",
+        "lat": -20.64871,
+        "lon": -41.90857,
+		"country": "巴西",
+        "cca2": "BR",
+        "region": "南美",
+        "city": "维多利亚"
+    },
+    {
+        "iata": "BWN",
+        "lat": 4.903052,
+        "lon": 114.939819,
+		"country": "文莱",
+        "cca2": "BN",
+        "region": "亚太",
+        "city": "斯里巴加湾"
+    },
+    {
+        "iata": "SOF",
+        "lat": 42.6966934204,
+        "lon": 23.4114360809,
+		"country": "保加利亚",
+        "cca2": "BG",
+        "region": "欧洲",
+        "city": "索菲亚"
+    },
+    {
+        "iata": "OUA",
+        "lat": 12.3531999588,
+        "lon": -1.5124200583,
+		"country": "布基纳法索",
+        "cca2": "BF",
+        "region": "非洲",
+        "city": "瓦加杜古"
+    },
+    {
+        "iata": "PNH",
+        "lat": 11.5466003418,
+        "lon": 104.84400177,
+		"country": "柬埔寨",
+        "cca2": "KH",
+        "region": "亚太",
+        "city": "金边"
+    },
+    {
+        "iata": "YYC",
+        "lat": 51.113899231,
+        "lon": -114.019996643,
+		"country": "加拿大",
+        "cca2": "CA",
+        "region": "北美洲",
+        "city": "卡尔加里"
+    },
+    {
+        "iata": "YVR",
+        "lat": 49.193901062,
+        "lon": -123.183998108,
+		"country": "加拿大",
+        "cca2": "CA",
+        "region": "北美洲",
+        "city": "温哥华"
+    },
+    {
+        "iata": "YWG",
+        "lat": 49.9099998474,
+        "lon": -97.2398986816,
+		"country": "加拿大",
+        "cca2": "CA",
+        "region": "北美洲",
+        "city": "温尼伯"
+    },
+    {
+        "iata": "YOW",
+        "lat": 45.3224983215,
+        "lon": -75.6691970825,
+		"country": "加拿大",
+        "cca2": "CA",
+        "region": "北美洲",
+        "city": "渥太华"
+    },
+    {
+        "iata": "YYZ",
+        "lat": 43.6772003174,
+        "lon": -79.6305999756,
+		"country": "加拿大",
+        "cca2": "CA",
+        "region": "北美洲",
+        "city": "多伦多"
+    },
+    {
+        "iata": "YUL",
+        "lat": 45.4706001282,
+        "lon": -73.7407989502,
+		"country": "加拿大",
+        "cca2": "CA",
+        "region": "北美洲",
+        "city": "蒙特利尔"
+    },
+    {
+        "iata": "YXE",
+        "lat": 52.1707992554,
+        "lon": -106.699996948,
+		"country": "加拿大",
+        "cca2": "CA",
+        "region": "北美洲",
+        "city": "萨斯卡通"
+    },
+    {
+        "iata": "ARI",
+        "lat": -18.348611,
+        "lon": -70.338889,
+		"country": "智利",
+        "cca2": "CL",
+        "region": "南美",
+        "city": "阿里卡"
+    },
+    {
+        "iata": "CCP",
+        "lat": -36.8201,
+        "lon": -73.0444,
+		"country": "智利",
+        "cca2": "CL",
+        "region": "南美",
+        "city": "康塞普西翁"
+    },
+    {
+        "iata": "SCL",
+        "lat": -33.3930015564,
+        "lon": -70.7857971191,
+		"country": "智利",
+        "cca2": "CL",
+        "region": "南美",
+        "city": "圣地亚哥"
+    },
+    {
+        "iata": "BOG",
+        "lat": 4.70159,
+        "lon": -74.1469,
+		"country": "哥伦比亚",
+        "cca2": "CO",
+        "region": "南美",
+        "city": "波哥大"
+    },
+    {
+        "iata": "MDE",
+        "lat": 6.16454,
+        "lon": -75.4231,
+		"country": "哥伦比亚",
+        "cca2": "CO",
+        "region": "南美",
+        "city": "麦德林"
+    },
+    {
+        "iata": "FIH",
+        "lat": -4.3857498169,
+        "lon": 15.4446001053,
+		"country": "刚果",
+        "cca2": "CD",
+        "region": "非洲",
+        "city": "金沙萨"
+    },
+    {
+        "iata": "SJO",
+        "lat": 9.9938602448,
+        "lon": -84.2088012695,
+		"country": "哥斯达黎加",
+        "cca2": "CR",
+        "region": "南美",
+        "city": "圣何塞"
+    },
+    {
+        "iata": "ZAG",
+        "lat": 45.7429008484,
+        "lon": 16.0687999725,
+		"country": "克罗地亚",
+        "cca2": "HR",
+        "region": "欧洲",
+        "city": "萨格勒布"
+    },
+    {
+        "iata": "CUR",
+        "lat": 12.1888999939,
+        "lon": -68.9598007202,
+		"country": "库拉索岛",
+        "cca2": "CW",
+        "region": "南美",
+        "city": "库拉索岛"
+    },
+    {
+        "iata": "LCA",
+        "lat": 34.8750991821,
+        "lon": 33.6249008179,
+		"country": "塞浦路斯",
+        "cca2": "CY",
+        "region": "欧洲",
+        "city": "尼科西亚"
+    },
+    {
+        "iata": "PRG",
+        "lat": 50.1007995605,
+        "lon": 14.2600002289,
+		"country": "捷克",
+        "cca2": "CZ",
+        "region": "欧洲",
+        "city": "布拉格"
+    },
+    {
+        "iata": "CPH",
+        "lat": 55.6179008484,
+        "lon": 12.6560001373,
+		"country": "丹麦",
+        "cca2": "DK",
+        "region": "欧洲",
+        "city": "哥本哈根"
+    },
+    {
+        "iata": "JIB",
+        "lat": 11.5473003387,
+        "lon": 43.1595001221,
+		"country": "吉布提",
+        "cca2": "DJ",
+        "region": "非洲",
+        "city": "吉布提"
+    },
+    {
+        "iata": "SDQ",
+        "lat": 18.4297008514,
+        "lon": -69.6688995361,
+		"country": "多米尼加",
+        "cca2": "DO",
+        "region": "北美洲",
+        "city": "圣多明各"
+    },
+    {
+        "iata": "GYE",
+        "lat": -2.1894,
+        "lon": -79.8891,
+		"country": "厄瓜多尔",
+        "cca2": "EC",
+        "region": "南美",
+        "city": "瓜亚基尔"
+    },
+    {
+        "iata": "UIO",
+        "lat": -0.1291666667,
+        "lon": -78.3575,
+		"country": "厄瓜多尔",
+        "cca2": "EC",
+        "region": "南美",
+        "city": "基多"
+    },
+    {
+        "iata": "TLL",
+        "lat": 59.4132995605,
+        "lon": 24.8327999115,
+		"country": "爱沙尼亚",
+        "cca2": "EE",
+        "region": "欧洲",
+        "city": "塔林"
+    },
+    {
+        "iata": "HEL",
+        "lat": 60.317199707,
+        "lon": 24.963300705,
+		"country": "芬兰",
+        "cca2": "FI",
+        "region": "欧洲",
+        "city": "赫尔辛基"
+    },
+    {
+        "iata": "LYS",
+        "lat": 45.7263,
+        "lon": 5.0908,
+		"country": "法国",
+        "cca2": "FR",
+        "region": "欧洲",
+        "city": "里昂"
+    },
+    {
+        "iata": "MRS",
+        "lat": 43.439271922,
+        "lon": 5.2214241028,
+		"country": "法国",
+        "cca2": "FR",
+        "region": "欧洲",
+        "city": "马赛"
+    },
+    {
+        "iata": "CDG",
+        "lat": 49.0127983093,
+        "lon": 2.5499999523,
+		"country": "法国",
+        "cca2": "FR",
+        "region": "欧洲",
+        "city": "巴黎"
+    },
+    {
+        "iata": "PPT",
+        "lat": -17.5536994934,
+        "lon": -149.606994629,
+		"country": "玻利尼西亚",
+        "cca2": "PF",
+        "region": "大洋洲",
+        "city": "塔希提岛"
+    },
+    {
+        "iata": "TBS",
+        "lat": 41.6692008972,
+        "lon": 44.95470047,
+		"country": "格鲁吉亚",
+        "cca2": "GE",
+        "region": "欧洲",
+        "city": "第比利斯"
+    },
+    {
+        "iata": "TXL",
+        "lat": 52.5597000122,
+        "lon": 13.2876996994,
+		"country": "德国",
+        "cca2": "DE",
+        "region": "欧洲",
+        "city": "柏林"
+    },
+    {
+        "iata": "DUS",
+        "lat": 51.2895011902,
+        "lon": 6.7667798996,
+		"country": "德国",
+        "cca2": "DE",
+        "region": "欧洲",
+        "city": "杜塞尔多夫"
+    },
+    {
+        "iata": "FRA",
+        "lat": 50.0264015198,
+        "lon": 8.543129921,
+		"country": "德国",
+        "cca2": "DE",
+        "region": "欧洲",
+        "city": "法兰克福"
+    },
+    {
+        "iata": "HAM",
+        "lat": 53.6304016113,
+        "lon": 9.9882297516,
+		"country": "德国",
+        "cca2": "DE",
+        "region": "欧洲",
+        "city": "汉堡"
+    },
+    {
+        "iata": "MUC",
+        "lat": 48.3538017273,
+        "lon": 11.7861003876,
+		"country": "德国",
+        "cca2": "DE",
+        "region": "欧洲",
+        "city": "慕尼黑"
+    },
+    {
+        "iata": "STR",
+        "lat": 48.783333,
+        "lon": 9.183333,
+		"country": "德国",
+        "cca2": "DE",
+        "region": "欧洲",
+        "city": "斯图加特"
+    },
+    {
+        "iata": "ACC",
+        "lat": 5.614818,
+        "lon": -0.205874,
+		"country": "加纳",
+        "cca2": "GH",
+        "region": "非洲",
+        "city": "阿克拉"
+    },
+    {
+        "iata": "ATH",
+        "lat": 37.9364013672,
+        "lon": 23.9444999695,
+		"country": "希腊",
+        "cca2": "GR",
+        "region": "欧洲",
+        "city": "雅典"
+    },
+    {
+        "iata": "SKG",
+        "lat": 40.5196990967,
+        "lon": 22.9708995819,
+		"country": "希腊",
+        "cca2": "GR",
+        "region": "欧洲",
+        "city": "塞萨洛尼基"
+    },
+    {
+        "iata": "GND",
+        "lat": 12.007116,
+        "lon": -61.7882288,
+		"country": "格林纳达",
+        "cca2": "GD",
+        "region": "南美",
+        "city": "圣乔治"
+    },
+    {
+        "iata": "GUM",
+        "lat": 13.4834003448,
+        "lon": 144.796005249,
+		"country": "关岛",
+        "cca2": "GU",
+        "region": "亚太",
+        "city": "阿加尼亚"
+    },
+    {
+        "iata": "GUA",
+        "lat": 14.5832996368,
+        "lon": -90.5274963379,
+		"country": "危地马拉",
+        "cca2": "GT",
+        "region": "北美洲",
+        "city": "危地马拉"
+    },
+    {
+        "iata": "GEO",
+        "lat": 6.825648,
+        "lon": -58.163756,
+		"country": "圭亚那",
+        "cca2": "GY",
+        "region": "南美",
+        "city": "乔治城"
+    },
+    {
+        "iata": "PAP",
+        "lat": 18.5799999237,
+        "lon": -72.2925033569,
+		"country": "海地",
+        "cca2": "HT",
+        "region": "北美洲",
+        "city": "太子港"
+    },
+    {
+        "iata": "TGU",
+        "lat": 14.0608,
+        "lon": -87.2172,
+		"country": "洪都拉斯",
+        "cca2": "HN",
+        "region": "南美",
+        "city": "洪都拉斯"
+    },
+    {
+        "iata": "HKG",
+        "lat": 22.3089008331,
+        "lon": 113.915000916,
+		"country": "香港",
+        "cca2": "HK",
+        "region": "亚太",
+        "city": "香港"
+    },
+    {
+        "iata": "BUD",
+        "lat": 47.4369010925,
+        "lon": 19.2555999756,
+		"country": "匈牙利",
+        "cca2": "HU",
+        "region": "欧洲",
+        "city": "布达佩斯"
+    },
+    {
+        "iata": "KEF",
+        "lat": 63.9850006104,
+        "lon": -22.6056003571,
+		"country": "冰岛",
+        "cca2": "IS",
+        "region": "欧洲",
+        "city": "雷克雅未克"
+    },
+    {
+        "iata": "AMD",
+        "lat": 23.0225,
+        "lon": 72.5714,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "艾哈迈达巴德"
+    },
+    {
+        "iata": "BLR",
+        "lat": 13.7835719,
+        "lon": 76.6165937,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "班加罗尔"
+    },
+    {
+        "iata": "BBI",
+        "lat": 20.2961,
+        "lon": 85.8245,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "布巴内斯瓦尔"
+    },
+    {
+        "iata": "IXC",
+        "lat": 30.673500061,
+        "lon": 76.7884979248,
+        "country": "印度",
+        "region": "亚太",
+        "city": "昌迪加尔"
+    },
+    {
+        "iata": "MAA",
+        "lat": 12.9900054932,
+        "lon": 80.1692962646,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "金奈"
+    },
+    {
+        "iata": "HYD",
+        "lat": 17.2313175201,
+        "lon": 78.4298553467,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "海得拉巴"
+    },
+    {
+        "iata": "CNN",
+        "lat": 11.915858,
+        "lon": 75.55094,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "坎纳诺尔"
+    },
+    {
+        "iata": "KNU",
+        "lat": 26.4499,
+        "lon": 80.3319,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "坎普尔"
+    },
+    {
+        "iata": "COK",
+        "lat": 9.9312,
+        "lon": 76.2673,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "高知城"
+    },
+    {
+        "iata": "CCU",
+        "lat": 22.6476933,
+        "lon": 88.4349249,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "加尔各答"
+    },
+    {
+        "iata": "BOM",
+        "lat": 19.0886993408,
+        "lon": 72.8678970337,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "孟买"
+    },
+    {
+        "iata": "NAG",
+        "lat": 21.1610714,
+        "lon": 79.0024702,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "那格浦尔"
+    },
+    {
+        "iata": "DEL",
+        "lat": 28.5664997101,
+        "lon": 77.1031036377,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "新德里"
+    },
+    {
+        "iata": "PAT",
+        "lat": 25.591299057,
+        "lon": 85.0879974365,
+		"country": "印度",
+        "cca2": "IN",
+        "region": "亚太",
+        "city": "巴特那"
+    },
+    {
+        "iata": "DPS",
+        "lat": -8.748169899,
+        "lon": 115.1669998169,
+		"country": "印尼",
+        "cca2": "ID",
+        "region": "亚太",
+        "city": "登巴萨"
+    },
+    {
+        "iata": "CGK",
+        "lat": -6.1275229,
+        "lon": 106.6515118,
+		"country": "印尼",
+        "cca2": "ID",
+        "region": "亚太",
+        "city": "雅加达"
+    },
+    {
+        "iata": "JOG",
+        "lat": -7.7881798744,
+        "lon": 110.4319992065,
+		"country": "印尼",
+        "cca2": "ID",
+        "region": "亚太",
+        "city": "日惹特区"
+    },
+    {
+        "iata": "BGW",
+        "lat": 33.2625007629,
+        "lon": 44.2346000671,
+		"country": "伊拉克",
+        "cca2": "IQ",
+        "region": "中东",
+        "city": "巴格达"
+    },
+    {
+        "iata": "BSR",
+        "lat": 30.5491008759,
+        "lon": 47.6621017456,
+		"country": "伊拉克",
+        "cca2": "IQ",
+        "region": "中东",
+        "city": "巴士拉"
+    },
+    {
+        "iata": "EBL",
+        "lat": 36.1901,
+        "lon": 43.993,
+		"country": "伊拉克",
+        "cca2": "IQ",
+        "region": "中东",
+        "city": "阿尔比尔"
+    },
+    {
+        "iata": "NJF",
+        "lat": 31.989722,
+        "lon": 44.404167,
+		"country": "伊拉克",
+        "cca2": "IQ",
+        "region": "中东",
+        "city": "纳杰夫"
+    },
+    {
+        "iata": "XNH",
+        "lat": 30.9358005524,
+        "lon": 46.0900993347,
+		"country": "伊拉克",
+        "cca2": "IQ",
+        "region": "中东",
+        "city": "纳西里耶"
+    },
+    {
+        "iata": "ISU",
+        "lat": 35.5668,
+        "lon": 45.4161,
+		"country": "伊拉克",
+        "cca2": "IQ",
+        "region": "中东",
+        "city": "苏莱曼尼亚"
+    },
+    {
+        "iata": "ORK",
+        "lat": 51.8413009644,
+        "lon": -8.491109848,
+		"country": "爱尔兰",
+        "cca2": "IE",
+        "region": "欧洲",
+        "city": "科克"
+    },
+    {
+        "iata": "DUB",
+        "lat": 53.4212989807,
+        "lon": -6.270070076,
+		"country": "爱尔兰",
+        "cca2": "IE",
+        "region": "欧洲",
+        "city": "都柏林"
+    },
+    {
+        "iata": "HFA",
+        "lat": 32.78492,
+        "lon": 34.96069,
+		"country": "以色列",
+        "cca2": "IL",
+        "region": "中东",
+        "city": "海法"
+    },
+    {
+        "iata": "TLV",
+        "lat": 32.0113983154,
+        "lon": 34.8866996765,
+		"country": "以色列",
+        "cca2": "IL",
+        "region": "中东",
+        "city": "特拉维夫"
+    },
+    {
+        "iata": "MXP",
+        "lat": 45.6305999756,
+        "lon": 8.7281103134,
+		"country": "意大利",
+        "cca2": "IT",
+        "region": "欧洲",
+        "city": "米兰"
+    },
+    {
+        "iata": "PMO",
+        "lat": 38.16114,
+        "lon": 13.31546,
+		"country": "意大利",
+        "cca2": "IT",
+        "region": "欧洲",
+        "city": "巴勒莫"
+    },
+    {
+        "iata": "FCO",
+        "lat": 41.8045005798,
+        "lon": 12.2508001328,
+		"country": "意大利",
+        "cca2": "IT",
+        "region": "欧洲",
+        "city": "罗马"
+    },
+    {
+        "iata": "KIN",
+        "lat": 17.9951,
+        "lon": -76.7846,
+		"country": "牙买加",
+        "cca2": "JM",
+        "region": "北美洲",
+        "city": "金斯顿"
+    },
+    {
+        "iata": "FUK",
+        "lat": 33.5902,
+        "lon": 130.4017,
+		"country": "日本",
+        "cca2": "JP",
+        "region": "亚太",
+        "city": "福冈"
+    },
+    {
+        "iata": "OKA",
+        "lat": 26.1958,
+        "lon": 127.646,
+		"country": "日本",
+        "cca2": "JP",
+        "region": "亚太",
+        "city": "那霸"
+    },
+    {
+        "iata": "KIX",
+        "lat": 34.4272994995,
+        "lon": 135.244003296,
+		"country": "日本",
+        "cca2": "JP",
+        "region": "亚太",
+        "city": "大阪"
+    },
+    {
+        "iata": "NRT",
+        "lat": 35.7647018433,
+        "lon": 140.386001587,
+		"country": "日本",
+        "cca2": "JP",
+        "region": "亚太",
+        "city": "东京"
+    },
+    {
+        "iata": "AMM",
+        "lat": 31.7226009369,
+        "lon": 35.9931983948,
+		"country": "约旦",
+        "cca2": "JO",
+        "region": "中东",
+        "city": "安曼"
+    },
+    {
+        "iata": "ALA",
+        "lat": 43.3521003723,
+        "lon": 77.0404968262,
+		"country": "哈萨克斯坦",
+        "cca2": "KZ",
+        "region": "亚太",
+        "city": "阿拉木图"
+    },
+    {
+        "iata": "MBA",
+        "lat": -4.0348300934,
+        "lon": 39.5942001343,
+		"country": "肯尼亚",
+        "cca2": "KE",
+        "region": "非洲",
+        "city": "蒙巴萨"
+    },
+    {
+        "iata": "NBO",
+        "lat": -1.319239974,
+        "lon": 36.9277992249,
+		"country": "肯尼亚",
+        "cca2": "KE",
+        "region": "非洲",
+        "city": "内罗毕"
+    },
+    {
+        "iata": "ICN",
+        "lat": 37.4691009521,
+        "lon": 126.450996399,
+		"country": "韩国",
+        "cca2": "KR",
+        "region": "亚太",
+        "city": "首尔"
+    },
+    {
+        "iata": "KWI",
+        "lat": 29.226600647,
+        "lon": 47.9688987732,
+        "cca2": "科威特",
+		"cca2": "KW",
+        "region": "中东",
+        "city": "科威特城"
+    },
+    {
+        "iata": "VTE",
+        "lat": 17.9757,
+        "lon": 102.5683,
+		"country": "老挝",
+        "cca2": "LA",
+        "region": "亚太",
+        "city": "万象"
+    },
+    {
+        "iata": "RIX",
+        "lat": 56.9235992432,
+        "lon": 23.9710998535,
+		"country": "拉脱维亚",
+        "cca2": "LV",
+        "region": "欧洲",
+        "city": "里加"
+    },
+    {
+        "iata": "BEY",
+        "lat": 33.8208999634,
+        "lon": 35.4883995056,
+		"country": "黎巴嫩",
+        "cca2": "LB",
+        "region": "中东",
+        "city": "贝鲁特"
+    },
+    {
+        "iata": "VNO",
+        "lat": 54.6341018677,
+        "lon": 25.2858009338,
+		"country": "立陶宛",
+        "cca2": "LT",
+        "region": "欧洲",
+        "city": "维尔纽斯"
+    },
+    {
+        "iata": "LUX",
+        "lat": 49.6265983582,
+        "lon": 6.211520195,
+		"country": "卢森堡",
+        "cca2": "LU",
+        "region": "欧洲",
+        "city": "卢森堡"
+    },
+    {
+        "iata": "MFM",
+        "lat": 22.1495990753,
+        "lon": 113.592002869,
+		"country": "澳门",
+        "cca2": "MO",
+        "region": "亚太",
+        "city": "澳门"
+    },
+    {
+        "iata": "TNR",
+        "lat": -18.91368,
+        "lon": 47.53613,
+		"country": "马达加斯加",
+        "cca2": "MG",
+        "region": "非洲",
+        "city": "塔那那利佛"
+    },
+    {
+        "iata": "JHB",
+        "lat": 1.635848,
+        "lon": 103.665943,
+		"country": "马来西亚",
+        "cca2": "MY",
+        "region": "亚太",
+        "city": "柔佛州"
+    },
+    {
+        "iata": "KUL",
+        "lat": 2.745579958,
+        "lon": 101.709999084,
+		"country": "马来西亚",
+        "cca2": "MY",
+        "region": "亚太",
+        "city": "吉隆坡"
+    },
+    {
+        "iata": "MLE",
+        "lat": 4.1748,
+        "lon": 73.50888,
+		"country": "马尔代夫",
+        "cca2": "MV",
+        "region": "亚太",
+        "city": "马累"
+    },
+    {
+        "iata": "MRU",
+        "lat": -20.4302005768,
+        "lon": 57.6836013794,
+		"country": "毛里求斯",
+        "cca2": "MU",
+        "region": "非洲",
+        "city": "路易港"
+    },
+    {
+        "iata": "GDL",
+        "lat": 20.5217990875,
+        "lon": -103.3109970093,
+		"country": "墨西哥",
+        "cca2": "MX",
+        "region": "北美洲",
+        "city": "瓜达拉哈拉"
+    },
+    {
+        "iata": "MEX",
+        "lat": 19.4363002777,
+        "lon": -99.0720977783,
+		"country": "墨西哥",
+        "cca2": "MX",
+        "region": "北美洲",
+        "city": "墨西哥"
+    },
+    {
+        "iata": "QRO",
+        "lat": 20.6173000336,
+        "lon": -100.185997009,
+		"country": "墨西哥",
+        "cca2": "MX",
+        "region": "北美洲",
+        "city": "克雷塔羅"
+    },
+    {
+        "iata": "KIV",
+        "lat": 46.9277000427,
+        "lon": 28.9309997559,
+		"country": "摩尔多瓦",
+        "cca2": "MD",
+        "region": "欧洲",
+        "city": "基希讷乌"
+    },
+    {
+        "iata": "ULN",
+        "lat": 47.8431015015,
+        "lon": 106.766998291,
+		"country": "蒙古",
+        "cca2": "MN",
+        "region": "亚太",
+        "city": "蒙古"
+    },
+    {
+        "iata": "CMN",
+        "lat": 33.3675003052,
+        "lon": -7.5899701118,
+		"country": "摩洛哥",
+        "cca2": "MA",
+        "region": "非洲",
+        "city": "卡萨布兰卡"
+    },
+    {
+        "iata": "MPM",
+        "lat": -25.9207992554,
+        "lon": 32.5726013184,
+		"country": "莫桑比克",
+        "cca2": "MZ",
+        "region": "非洲",
+        "city": "马普托"
+    },
+    {
+        "iata": "MDL",
+        "lat": 21.7051697,
+        "lon": 95.9695206,
+		"country": "缅甸",
+        "cca2": "MM",
+        "region": "亚太",
+        "city": "曼德勒"
+    },
+    {
+        "iata": "RGN",
+        "lat": 16.9073009491,
+        "lon": 96.1332015991,
+		"country": "缅甸",
+        "cca2": "MM",
+        "region": "亚太",
+        "city": "仰光"
+    },
+    {
+        "iata": "KTM",
+        "lat": 27.6965999603,
+        "lon": 85.3591003418,
+		"country": "尼泊尔",
+        "cca2": "NP",
+        "region": "亚太",
+        "city": "加德满都"
+    },
+    {
+        "iata": "AMS",
+        "lat": 52.3086013794,
+        "lon": 4.7638897896,
+		"country": "荷兰",
+        "cca2": "NL",
+        "region": "欧洲",
+        "city": "阿姆斯特丹"
+    },
+    {
+        "iata": "NOU",
+        "lat": -22.0146007538,
+        "lon": 166.212997436,
+		"country": "新喀里多尼亚",
+        "cca2": "NC",
+        "region": "大洋洲",
+        "city": "努美阿"
+    },
+    {
+        "iata": "AKL",
+        "lat": -37.0080986023,
+        "lon": 174.792007446,
+		"country": "新西兰",
+        "cca2": "NZ",
+        "region": "大洋洲",
+        "city": "奥克兰"
+    },
+    {
+        "iata": "CHC",
+        "lat": -43.4893989563,
+        "lon": 172.5319976807,
+		"country": "新西兰",
+        "cca2": "NZ",
+        "region": "大洋洲",
+        "city": "克赖斯特彻"
+    },
+    {
+        "iata": "LOS",
+        "lat": 6.5773701668,
+        "lon": 3.321160078,
+		"country": "尼日利亚",
+        "cca2": "NG",
+        "region": "非洲",
+        "city": "拉各斯"
+    },
+    {
+        "iata": "OSL",
+        "lat": 60.193901062,
+        "lon": 11.100399971,
+		"country": "挪威",
+        "cca2": "NO",
+        "region": "欧洲",
+        "city": "奥斯陆"
+    },
+    {
+        "iata": "MCT",
+        "lat": 23.5932998657,
+        "lon": 58.2844009399,
+		"country": "阿曼",
+        "cca2": "OM",
+        "region": "中东",
+        "city": "马斯喀特"
+    },
+    {
+        "iata": "ISB",
+        "lat": 33.6166992188,
+        "lon": 73.0991973877,
+		"country": "巴基斯坦",
+        "cca2": "PK",
+        "region": "亚太",
+        "city": "伊斯兰堡"
+    },
+    {
+        "iata": "KHI",
+        "lat": 24.9064998627,
+        "lon": 67.1607971191,
+		"country": "巴基斯坦",
+        "cca2": "PK",
+        "region": "亚太",
+        "city": "卡拉奇"
+    },
+    {
+        "iata": "LHE",
+        "lat": 31.5216007233,
+        "lon": 74.4036026001,
+		"country": "巴基斯坦",
+        "cca2": "PK",
+        "region": "亚太",
+        "city": "拉合尔"
+    },
+    {
+        "iata": "ZDM",
+        "lat": 32.2719,
+        "lon": 35.0194,
+		"country": "巴勒斯坦",
+        "cca2": "PS",
+        "region": "中东",
+        "city": "拉姆安拉"
+    },
+    {
+        "iata": "PTY",
+        "lat": 9.0713596344,
+        "lon": -79.3834991455,
+		"country": "巴拿马",
+        "cca2": "PA",
+        "region": "南美",
+        "city": "巴拿马城"
+    },
+    {
+        "iata": "ASU",
+        "lat": -25.2399997711,
+        "lon": -57.5200004578,
+		"country": "巴拉圭",
+        "cca2": "PY",
+        "region": "南美",
+        "city": "亚松森"
+    },
+    {
+        "iata": "LIM",
+        "lat": -12.021900177,
+        "lon": -77.1143035889,
+		"country": "秘鲁",
+        "cca2": "PE",
+        "region": "南美",
+        "city": "利马"
+    },
+    {
+        "iata": "CGY",
+        "lat": 8.4156198502,
+        "lon": 124.611000061,
+		"country": "菲律宾",
+        "cca2": "PH",
+        "region": "亚太",
+        "city": "哥打巴托市"
+    },
+    {
+        "iata": "CEB",
+        "lat": 10.3074998856,
+        "lon": 123.978996277,
+		"country": "菲律宾",
+        "cca2": "PH",
+        "region": "亚太",
+        "city": "宿务"
+    },
+    {
+        "iata": "MNL",
+        "lat": 14.508600235,
+        "lon": 121.019996643,
+		"country": "菲律宾",
+        "cca2": "PH",
+        "region": "亚太",
+        "city": "马尼拉"
+    },
+    {
+        "iata": "WAW",
+        "lat": 52.1656990051,
+        "lon": 20.9671001434,
+		"country": "波兰",
+        "cca2": "PL",
+        "region": "欧洲",
+        "city": "华沙"
+    },
+    {
+        "iata": "LIS",
+        "lat": 38.7812995911,
+        "lon": -9.1359195709,
+		"country": "葡萄牙",
+        "cca2": "PT",
+        "region": "欧洲",
+        "city": "里斯本"
+    },
+    {
+        "iata": "DOH",
+        "lat": 25.2605946,
+        "lon": 51.6137665,
+		"country": "卡塔尔",
+        "cca2": "QA",
+        "region": "中东",
+        "city": "多哈"
+    },
+    {
+        "iata": "RUN",
+        "lat": -20.8871002197,
+        "lon": 55.5102996826,
+		"country": "留尼汪",
+        "cca2": "RE",
+        "region": "非洲",
+        "city": "圣但尼"
+    },
+    {
+        "iata": "OTP",
+        "lat": 44.5722007751,
+        "lon": 26.1021995544,
+		"country": "罗马尼亚",
+        "cca2": "RO",
+        "region": "欧洲",
+        "city": "布加勒斯特"
+    },
+    {
+        "iata": "KHV",
+        "lat": 48.5279998779,
+        "lon": 135.18800354,
+		"country": "俄罗斯",
+        "cca2": "RU",
+        "region": "亚太",
+        "city": "哈巴罗夫斯克"
+    },
+    {
+        "iata": "KJA",
+        "lat": 56.0153,
+        "lon": 92.8932,
+		"country": "俄罗斯",
+        "cca2": "RU",
+        "region": "亚太",
+        "city": "克拉斯诺亚尔斯克"
+    },
+    {
+        "iata": "DME",
+        "lat": 55.4087982178,
+        "lon": 37.9062995911,
+		"country": "俄罗斯",
+        "cca2": "RU",
+        "region": "欧洲",
+        "city": "莫斯科"
+    },
+    {
+        "iata": "LED",
+        "lat": 59.8003005981,
+        "lon": 30.2625007629,
+		"country": "俄罗斯",
+        "cca2": "RU",
+        "region": "欧洲",
+        "city": "圣彼得堡"
+    },
+    {
+        "iata": "KLD",
+        "lat": 56.8587,
+        "lon": 35.9176,
+		"country": "俄罗斯",
+        "cca2": "RU",
+        "region": "欧洲",
+        "city": "特维尔"
+    },
+    {
+        "iata": "SVX",
+        "lat": 56.8431,
+        "lon": 60.6454,
+		"country": "俄罗斯",
+        "cca2": "RU",
+        "region": "亚太",
+        "city": "叶卡捷琳堡"
+    },
+    {
+        "iata": "KGL",
+        "lat": -1.9686299563,
+        "lon": 30.1394996643,
+		"country": "卢旺达",
+        "cca2": "RW",
+        "region": "非洲",
+        "city": "基加利"
+    },
+    {
+        "iata": "DMM",
+        "lat": 26.471200943,
+        "lon": 49.7979011536,
+		"country": "沙特阿拉伯",
+        "cca2": "SA",
+        "region": "中东",
+        "city": "达曼"
+    },
+    {
+        "iata": "JED",
+        "lat": 21.679599762,
+        "lon": 39.15650177,
+		"country": "沙特阿拉伯",
+        "cca2": "SA",
+        "region": "中东",
+        "city": "吉达"
+    },
+    {
+        "iata": "RUH",
+        "lat": 24.9575996399,
+        "lon": 46.6987991333,
+		"country": "沙特阿拉伯",
+        "cca2": "SA",
+        "region": "中东",
+        "city": "利雅得"
+    },
+    {
+        "iata": "DKR",
+        "lat": 14.7412099,
+        "lon": -17.4889771,
+		"country": "塞内加尔",
+        "cca2": "SN",
+        "region": "非洲",
+        "city": "达喀尔"
+    },
+    {
+        "iata": "BEG",
+        "lat": 44.8184013367,
+        "lon": 20.3090991974,
+		"country": "塞尔维亚",
+        "cca2": "RS",
+        "region": "欧洲",
+        "city": "贝尔格莱德"
+    },
+    {
+        "iata": "SIN",
+        "lat": 1.3501900434,
+        "lon": 103.994003296,
+		"country": "新加坡",
+        "cca2": "SG",
+        "region": "亚太",
+        "city": "新加坡"
+    },
+    {
+        "iata": "BTS",
+        "lat": 48.1486,
+        "lon": 17.1077,
+		"country": "斯洛伐克",
+        "cca2": "SK",
+        "region": "欧洲",
+        "city": "布拉迪斯拉发"
+    },
+    {
+        "iata": "CPT",
+        "lat": -33.9648017883,
+        "lon": 18.6016998291,
+		"country": "南非",
+        "cca2": "ZA",
+        "region": "非洲",
+        "city": "开普敦"
+    },
+    {
+        "iata": "DUR",
+        "lat": -29.6144444444,
+        "lon": 31.1197222222,
+		"country": "南非",
+        "cca2": "ZA",
+        "region": "非洲",
+        "city": "德班"
+    },
+    {
+        "iata": "JNB",
+        "lat": -26.133333,
+        "lon": 28.25,
+		"country": "南非",
+        "cca2": "ZA",
+        "region": "非洲",
+        "city": "约翰内斯堡"
+    },
+    {
+        "iata": "BCN",
+        "lat": 41.2971000671,
+        "lon": 2.0784599781,
+		"country": "西班牙",
+        "cca2": "ES",
+        "region": "欧洲",
+        "city": "巴塞罗那"
+    },
+    {
+        "iata": "MAD",
+        "lat": 40.4936,
+        "lon": -3.56676,
+		"country": "西班牙",
+        "cca2": "ES",
+        "region": "欧洲",
+        "city": "马德里"
+    },
+    {
+        "iata": "CMB",
+        "lat": 7.1807599068,
+        "lon": 79.8841018677,
+		"country": "斯里兰卡",
+        "cca2": "LK",
+        "region": "亚太",
+        "city": "科伦坡"
+    },
+    {
+        "iata": "PBM",
+        "lat": 5.452831,
+        "lon": -55.187783,
+		"country": "苏里南",
+        "cca2": "SR",
+        "region": "南美",
+        "city": "帕拉马里博"
+    },
+    {
+        "iata": "GOT",
+        "lat": 57.6627998352,
+        "lon": 12.279800415,
+		"country": "瑞典",
+        "cca2": "SE",
+        "region": "欧洲",
+        "city": "哥德堡"
+    },
+    {
+        "iata": "ARN",
+        "lat": 59.6519012451,
+        "lon": 17.9186000824,
+		"country": "瑞典",
+        "cca2": "SE",
+        "region": "欧洲",
+        "city": "斯德哥尔摩"
+    },
+    {
+        "iata": "GVA",
+        "lat": 46.2380981445,
+        "lon": 6.1089501381,
+		"country": "瑞士",
+        "cca2": "CH",
+        "region": "欧洲",
+        "city": "日内瓦"
+    },
+    {
+        "iata": "ZRH",
+        "lat": 47.4646987915,
+        "lon": 8.5491695404,
+		"country": "瑞士",
+        "cca2": "CH",
+        "region": "欧洲",
+        "city": "苏黎世"
+    },
+    {
+        "iata": "KHH",
+        "lat": 22.5771007538,
+        "lon": 120.3499984741,
+		"country": "台湾",
+        "cca2": "TW",
+        "region": "亚太",
+        "city": "高雄"
+    },
+    {
+        "iata": "TPE",
+        "lat": 25.0776996613,
+        "lon": 121.233001709,
+		"country": "台湾",
+        "cca2": "TW",
+        "region": "亚太",
+        "city": "台北"
+    },
+    {
+        "iata": "DAR",
+        "lat": -6.8781099319,
+        "lon": 39.2025985718,
+		"country": "坦桑尼亚",
+        "cca2": "TZ",
+        "region": "非洲",
+        "city": "达累斯萨拉姆"
+    },
+    {
+        "iata": "BKK",
+        "lat": 13.6810998917,
+        "lon": 100.747001648,
+		"country": "泰国",
+        "cca2": "TH",
+        "region": "亚太",
+        "city": "曼谷"
+    },
+    {
+        "iata": "CNX",
+        "lat": 18.7667999268,
+        "lon": 98.962600708,
+		"country": "泰国",
+        "cca2": "TH",
+        "region": "亚太",
+        "city": "清迈"
+    },
+    {
+        "iata": "URT",
+        "lat": 9.1325998306,
+        "lon": 99.135597229,
+		"country": "泰国",
+        "cca2": "TH",
+        "region": "亚太",
+        "city": "素叻府"
+    },
+    {
+        "iata": "TUN",
+        "lat": 36.8510017395,
+        "lon": 10.2271995544,
+		"country": "突尼斯",
+        "cca2": "TN",
+        "region": "非洲",
+        "city": "突尼斯"
+    },
+    {
+        "iata": "IST",
+        "lat": 40.9768981934,
+        "lon": 28.8145999908,
+		"country": "土耳其",
+        "cca2": "TR",
+        "region": "欧洲",
+        "city": "伊斯坦布尔"
+    },
+    {
+        "iata": "ADB",
+        "lat": 38.32377,
+        "lon": 27.14317,
+		"country": "土耳其",
+        "cca2": "TR",
+        "region": "欧洲",
+        "city": "伊兹密尔"
+    },
+    {
+        "iata": "KBP",
+        "lat": 50.3450012207,
+        "lon": 30.8946990967,
+		"country": "乌克兰",
+        "cca2": "UA",
+        "region": "欧洲",
+        "city": "基辅"
+    },
+    {
+        "iata": "DXB",
+        "lat": 25.2527999878,
+        "lon": 55.3643989563,
+		"country": "阿联酋",
+        "cca2": "AE",
+        "region": "中东",
+        "city": "迪拜"
+    },
+    {
+        "iata": "EDI",
+        "lat": 55.9500007629,
+        "lon": -3.3724999428,
+		"country": "英国",
+        "cca2": "GB",
+        "region": "欧洲",
+        "city": "爱丁堡"
+    },
+    {
+        "iata": "LHR",
+        "lat": 51.4706001282,
+        "lon": -0.4619410038,
+		"country": "英国",
+        "cca2": "GB",
+        "region": "欧洲",
+        "city": "伦敦"
+    },
+    {
+        "iata": "MAN",
+        "lat": 53.3536987305,
+        "lon": -2.2749500275,
+		"country": "英国",
+        "cca2": "GB",
+        "region": "欧洲",
+        "city": "Manchester"
+    },
+    {
+        "iata": "MGM",
+        "lat": 32.30059814,
+        "lon": -86.39399719,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "蒙哥马利"
+    },
+    {
+        "iata": "PHX",
+        "lat": 33.434299469,
+        "lon": -112.012001038,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "凤凰城"
+    },
+    {
+        "iata": "LAX",
+        "lat": 33.94250107,
+        "lon": -118.4079971,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "洛杉矶"
+    },
+    {
+        "iata": "SMF",
+        "lat": 38.695400238,
+        "lon": -121.591003418,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "萨克拉门托"
+    },
+    {
+        "iata": "SAN",
+        "lat": 32.7336006165,
+        "lon": -117.190002441,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "圣地亚哥"
+    },
+    {
+        "iata": "SFO",
+        "lat": 37.6189994812,
+        "lon": -122.375,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "旧金山"
+    },
+    {
+        "iata": "SJC",
+        "lat": 37.3625984192,
+        "lon": -121.929000855,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "圣何塞"
+    },
+    {
+        "iata": "DEN",
+        "lat": 39.8616981506,
+        "lon": -104.672996521,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "丹佛"
+    },
+    {
+        "iata": "JAX",
+        "lat": 30.4941005707,
+        "lon": -81.6878967285,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "杰克逊维尔"
+    },
+    {
+        "iata": "MIA",
+        "lat": 25.7931995392,
+        "lon": -80.2906036377,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "迈阿密"
+    },
+    {
+        "iata": "TLH",
+        "lat": 30.3964996338,
+        "lon": -84.3503036499,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "塔拉哈西"
+    },
+    {
+        "iata": "TPA",
+        "lat": 27.9755001068,
+        "lon": -82.533203125,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "坦帕市"
+    },
+    {
+        "iata": "ATL",
+        "lat": 33.6366996765,
+        "lon": -84.4281005859,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "亚特兰大"
+    },
+    {
+        "iata": "HNL",
+        "lat": 21.3187007904,
+        "lon": -157.9219970703,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "檀香山"
+    },
+    {
+        "iata": "ORD",
+        "lat": 41.97859955,
+        "lon": -87.90480042,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "芝加哥"
+    },
+    {
+        "iata": "IND",
+        "lat": 39.717300415,
+        "lon": -86.2944030762,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "印第安纳波利斯"
+    },
+    {
+        "iata": "BGR",
+        "lat": 44.8081,
+        "lon": -68.795,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "班格尔"
+    },
+    {
+        "iata": "BOS",
+        "lat": 42.36429977,
+        "lon": -71.00520325,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "波士顿"
+    },
+    {
+        "iata": "DTW",
+        "lat": 42.2123985291,
+        "lon": -83.3534011841,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "底特律"
+    },
+    {
+        "iata": "MSP",
+        "lat": 44.8819999695,
+        "lon": -93.2218017578,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "明尼阿波利斯"
+    },
+    {
+        "iata": "MCI",
+        "lat": 39.2975997925,
+        "lon": -94.7138977051,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "堪萨斯城"
+    },
+    {
+        "iata": "STL",
+        "lat": 38.7486991882,
+        "lon": -90.3700027466,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "圣路易斯"
+    },
+    {
+        "iata": "OMA",
+        "lat": 41.3031997681,
+        "lon": -95.8940963745,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "奥马哈"
+    },
+    {
+        "iata": "LAS",
+        "lat": 36.08010101,
+        "lon": -115.1520004,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "拉斯维加斯"
+    },
+    {
+        "iata": "EWR",
+        "lat": 40.6925010681,
+        "lon": -74.1687011719,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "纽瓦克"
+    },
+    {
+        "iata": "ABQ",
+        "lat": 35.0844,
+        "lon": -106.6504,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "阿尔伯克基"
+    },
+    {
+        "iata": "BUF",
+        "lat": 42.94049835,
+        "lon": -78.73220062,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "布法罗"
+    },
+    {
+        "iata": "CLT",
+        "lat": 35.2140007019,
+        "lon": -80.9430999756,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "夏洛特敦"
+    },
+    {
+        "iata": "CMH",
+        "lat": 39.9980010986,
+        "lon": -82.8918991089,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "哥伦布"
+    },
+    {
+        "iata": "PDX",
+        "lat": 45.58869934,
+        "lon": -122.5979996,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "波特兰"
+    },
+    {
+        "iata": "PHL",
+        "lat": 39.8718986511,
+        "lon": -75.2410964966,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "费城"
+    },
+    {
+        "iata": "PIT",
+        "lat": 40.49150085,
+        "lon": -80.23290253,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "匹兹堡"
+    },
+    {
+        "iata": "FSD",
+        "lat": 43.540819819502,
+        "lon": -96.65511577730963,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "苏瀑布"
+    },
+    {
+        "iata": "MEM",
+        "lat": 35.0424003601,
+        "lon": -89.9766998291,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "孟菲斯"
+    },
+    {
+        "iata": "BNA",
+        "lat": 36.1245002747,
+        "lon": -86.6781997681,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "纳什维尔"
+    },
+    {
+        "iata": "AUS",
+        "lat": 30.1975,
+        "lon": -97.6664,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "奥斯汀"
+    },
+    {
+        "iata": "DFW",
+        "lat": 32.8968009949,
+        "lon": -97.0380020142,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "达拉斯"
+    },
+    {
+        "iata": "IAH",
+        "lat": 29.9843997955,
+        "lon": -95.3414001465,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "休斯顿"
+    },
+    {
+        "iata": "MFE",
+        "lat": 26.17580032,
+        "lon": -98.23860168,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "麦卡伦"
+    },
+    {
+        "iata": "SLC",
+        "lat": 40.7883987427,
+        "lon": -111.977996826,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "盐湖城"
+    },
+    {
+        "iata": "IAD",
+        "lat": 38.94449997,
+        "lon": -77.45580292,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "阿什本"
+    },
+    {
+        "iata": "ORF",
+        "lat": 36.8945999146,
+        "lon": -76.2012023926,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "诺福克"
+    },
+    {
+        "iata": "RIC",
+        "lat": 37.5051994324,
+        "lon": -77.3197021484,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "里士满"
+    },
+    {
+        "iata": "SEA",
+        "lat": 47.4490013123,
+        "lon": -122.308998108,
+		"country": "美国",
+        "cca2": "US",
+        "region": "北美洲",
+        "city": "西雅图"
+    },
+    {
+        "iata": "TAS",
+        "lat": 41.257900238,
+        "lon": 69.2811965942,
+		"country": "乌兹别克斯坦",
+        "cca2": "UZ",
+        "region": "亚太",
+        "city": "塔什干"
+    },
+    {
+        "iata": "HAN",
+        "lat": 21.221200943,
+        "lon": 105.806999206,
+		"country": "越南",
+        "cca2": "VN",
+        "region": "亚太",
+        "city": "河内"
+    },
+    {
+        "iata": "SGN",
+        "lat": 10.8187999725,
+        "lon": 106.652000427,
+		"country": "越南",
+        "cca2": "VN",
+        "region": "亚太",
+        "city": "胡志明市"
+    },
+    {
+        "iata": "HRE",
+        "lat": -17.9318008423,
+        "lon": 31.0928001404,
+		"country": "津巴布韦",
+        "cca2": "ZW",
+        "region": "非洲",
+        "city": "哈拉雷"
+    }
+]
