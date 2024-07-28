@@ -20,10 +20,10 @@
 ### `GPT-RPoroxy`文件夹：在CF中反向代理自行部署的chatgpt
 - 脚本来自CMLiu大佬；自行部署chatgpt[项目地址](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
 
-### `CFcdn-proxy`文件夹：将任意域名通过CF进行反代
+### `CFcdn-proxy`文件夹：将任意服务（域名或IP）通过CF进行反代
 
 ### `sub-convert`文件夹：节点转换器搭建
-- 示例：<https://csub.yutian81.top>
+- ~~示例：<https://csub.yutian81.top>~~
 
 ### `shortlink`文件夹：生成短链接的
 - 示例：<https://slink.yutian81.top/duanlian>
@@ -33,7 +33,7 @@
 
 ## 节点转换器
 - [**不良林的搭建教程**](https://github.com/bulianglin/psub)
-- **自建示例前端：** <https://csub.yutian81.top>；后端：`csub.yutian81.top`
+- ~~自建示例前端 <https://csub.yutian81.top>；后端：`csub.yutian81.top`~~
 - 不良林转换器前端：<https://psub.888005.xyz>；后端：`psub.888005.xyz`
 - 肥羊转换器前端：<https://sub.v1.mk>；后端：`url.v1.mk`
 - 边缘转换器前端：<https://bianyuan.xyz/>；后端：`pub-api-1.bianyuan.xyz`
@@ -44,12 +44,12 @@
   - lhie1：`api.dler.io`
   - 猫熊：`sub.maoxiongnet.com`
   - CM：`subapi.fxxk.dedyn.io`
-- v2rayse转换工具：通过 <https://v2rayse.com/> 中的`节点转换工具`，将v2ray节点和clash节点互转，并可自动备份到github，自动生成订阅链接
+- v2rayse转换工具：通过 <https://v1.v2rayse.com/> 中的`节点转换工具`，将v2ray节点和clash节点互转，并可自动备份到github，自动生成订阅链接
 - 本地转换工具
   - 不良林教程：https://bulianglin.com/archives/51.html  
   - 需要先下载[本地转换工具](https://github.com/tindy2013/subconverter/releases)  
 
-## 订阅转换器配置文件（来自A4大佬）：
+## 订阅转换器配置文件：
 - A4带负载均衡完整版，[项目地址](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)
 ```ini
 https://ghproxy.net/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini
