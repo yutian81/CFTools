@@ -21,3 +21,13 @@ https://spurl.api.030101.xyz
 要下载 10 千字节：`https://spurl.api.030101.xyz/10kb`  
 要下载 100 兆字节：`https://spurl.api.030101.xyz/100mb`  
 要下载 1 千兆字节：`https://spurl.api.030101.xyz/1gb`  
+
+## 其他说明
+- nekobox官方测速地址：`http://cachefly.cachefly.net/100mb.test`
+- 测速地址用于`CloudflareSpeedTest`工具，[项目地址](https://github.com/XIU2/CloudflareSpeedTest)
+- 其他测速地址
+ ```
+ https://cf-speedtest.acfun.win/100mb.test
+ https://down.heleguo.top/download/100MB.zip
+ https://speed.cloudflare.com/__down?bytes=100000000
+ ```
