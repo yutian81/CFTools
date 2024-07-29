@@ -1,3 +1,7 @@
+# shortlink
+- 用于生成短链接
+- 示例：<https://slink.yutian81.top/duanlian>
+
 ## 创建kv空间
 名称：随意，例如`shortlink`  
 创建一个密钥，名称：`password`，值：随意，但要自己记住  
