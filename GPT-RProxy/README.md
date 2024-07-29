@@ -1,5 +1,6 @@
 ## Chatgpt-RProxy
 > 反向代理`api.openai.com`官网API接口地址
+> 脚本来自CMLiu大佬
 
 注册ChatGPT：https://chat.openai.com  
 
@@ -16,3 +17,5 @@
 [ChatGPT-WebUI项目地址](https://github.com/Yidadaa/ChatGPT-Next-Web)  
 
 [视频教程](https://www.youtube.com/watch?v=yndqfXr_qPg)  
+
+[自行部署chatgpt](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
