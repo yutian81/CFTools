@@ -1,5 +1,5 @@
 ## cohere2openai
-这是一个 Cloudflare Worker，用于将 Cohere API 转换为 OpenAI API
+这是一个 Cloudflare Worker，用于将 Cohere API 转换为 OpenAI API  
 原项目地址：https://github.com/beanqi/cohere2openai
 
 ## 如何使用
