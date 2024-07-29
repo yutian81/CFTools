@@ -24,10 +24,11 @@ https://youtu.be/X7CC5jrgazo
 - vless  &ensp;  `取决于后端 `
 - hysteria  &ensp;  `取决于后端`  
 
-## `_workers2.js` 使用说明
-在cloudflare worker上实现，免费！稳定！
+## 文件说明
+`_workers.js`：可自建后端  
+`_workers2.js`：使用第三方后端  
 
-### 使用
+### `_workers2.js`的使用
 将程序导入worker，配置好你机场的订阅链接，访问worker的时候url后面带上参数，即可生成不同工具的配置  
 如生成clash的配置，访问`https://xxx.xxx.workers.dev/clash`  
-后端使用的边缘的，这里可以使用自己搭建的后端`https://csub.yutian81.top/sub?`  
+后端使用边缘的API，可以使用自己搭建的后端`csub.yutian81.top`  
