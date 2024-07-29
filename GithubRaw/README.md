@@ -1,5 +1,6 @@
-# CF-Workers-Raw：轻松访问GitHub私有仓库
-这个项目允许你通过Cloudflare Workers安全地访问GitHub私有仓库中的原始文件，无需直接暴露你的GitHub令牌。
+# GithubRaw：轻松访问GitHub私有仓库
+- 这个项目允许你通过Cloudflare Workers安全地访问GitHub私有仓库中的原始文件，无需直接暴露你的GitHub令牌。
+- 本人私库：在直链前加前缀`https://github.yutian**.top/`
 
 ## 为什么需要这个工具？
 
