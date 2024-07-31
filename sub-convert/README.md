@@ -44,7 +44,7 @@ https://youtu.be/X7CC5jrgazo
   - subconvert：`sub.xeton.dev`
   - lhie1：`api.dler.io`
   - 猫熊：`sub.maoxiongnet.com`
-  - CM：`fxxk.dedyn.io`
+  - CM：`subapi.fxxk.dedyn.io`
 - v2rayse转换工具：通过 <https://v1.v2rayse.com/> 中的`节点转换工具`，将v2ray节点和clash节点互转，并可自动备份到github，自动生成订阅链接
 - 本地转换工具
   - 不良林教程：https://bulianglin.com/archives/51.html  
