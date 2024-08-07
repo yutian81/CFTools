@@ -16,7 +16,7 @@
 - 等待解析生效后访问你的自定义域名
 
 ### 部署示例
-<https://webssh.yutian81.top>
+<https://ssh.yzong.us.kg>  
 
 ### webssh的github项目
 带`ssh link`功能的：<https://github.com/crazypeace/huashengdun-webssh>
