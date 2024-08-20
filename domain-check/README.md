@@ -1,3 +1,9 @@
+# CF部署
+`workers.js`复制到CF的workers项目；  
+第10行修改`域名管理`,自定义你自己的标题；
+第11行修改`domains.json链接`，改为你自己的域名数据；
+demo：https://domain-check.yutian88881.workers.dev/
+
 ## 项目简介
 
 这是一个简洁高效的域名可视化展示面板，基于Cloudflare Workers构建。它提供了一个直观的界面，让用户能够一目了然地查看他们的域名组合，包括各个域名的状态、注册商、注册日期、过期日期和使用进度。
