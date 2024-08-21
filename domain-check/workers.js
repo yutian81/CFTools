@@ -4,7 +4,7 @@ addEventListener('fetch', event => {
   
   async function handleRequest(request, event) {
     const env = event.env || {}; // 获取 env 对象
-    const CUSTOM_NAME = env.CUSTOM_NAME || "域名管理";
+    const CUSTOM_NAME = env.CUSTOM_NAME || "域名监控";
     const DOMAINS_JSON = env.DOMAINS_JSON || "https://raw.githubusercontent.com/yutian81/CFTools/main/domain-check/domains.json";
   
     if (!DOMAINS_JSON) {
