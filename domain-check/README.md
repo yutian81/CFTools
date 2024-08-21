@@ -1,8 +1,4 @@
-# CF部署
-`workers.js`复制到CF的workers项目；  
-第10行修改`域名管理`,自定义你自己的标题；  
-第11行修改`domains.json链接`，改为你自己的域名数据；  
-demo：https://domain-check.yutian88881.workers.dev  
+### 本人修改版请[移步到此](https://github.com/yutian81/domain-check)
 
 ## 项目简介
 
