@@ -10,11 +10,13 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 项目地址2：https://github.com/crazypeace/gh-proxy  
           代码：`_workers2.js`  
 
+项目3：网页前端在线代理     
+          代码：`_workers3.js`  
+
 ## 演示
 
 https://gh.api.99988866.xyz/  
 
-https://ghproxy.agrayman.gay/
 
 ## 使用
 
