@@ -1,11 +1,8 @@
-# CFcdn-proxy
-将任意服务（域名或IP）通过CF进行反代，类似ngix的作用
-
 ## `_workers.js` 说明
-反向代理加速多个域名  
+反向代理多个域名  
 
 ## `_workers2.js` 说明
-反向代理加速单个域名  
+反向代理单个域名  
 
 ## `_workers3.js` 说明
 在线代理服务器，带web界面，来自mingyu大佬  
