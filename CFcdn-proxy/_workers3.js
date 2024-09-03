@@ -37,10 +37,10 @@ async function handleRequest(request) {
 			}
 
 			#container {
-			max-width: 85%;
+			max-width: 80%;
 			width: 100%;
 			background-color: #fff;
-			padding: 20px;
+			padding: 30px;
 			border-radius: 10px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 			box-sizing: border-box;
@@ -73,6 +73,7 @@ async function handleRequest(request) {
 			margin: 10px auto;
 			margin-top: 10px;
 			margin-bottom: 20px;	
+			text-align: center;
 			}
 
 			input[type="button"] {
