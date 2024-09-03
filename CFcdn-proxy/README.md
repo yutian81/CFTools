@@ -23,5 +23,4 @@
 [原仓库](https://github.com/xixu-me/Proxy-Everything) 
 
 ## `_workers6.js` 说明
-为开发者提供一个简单、快速、自由的代理服务的解决方案，它可以代理任何 URL，同时保护用户的隐私。  
-与5类似，增加了前端网页
+有前端网页，与5类似
