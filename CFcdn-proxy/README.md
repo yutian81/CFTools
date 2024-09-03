@@ -8,13 +8,13 @@
 反向代理加速单个域名  
 
 ## `_workers3.js` 说明
-反向代理加速任意网站，带web界面  
+在线代理服务器，带web界面，来自mingyu大佬  
 [使用教程](https://github.com/ymyuuu/Cloudflare-Workers-Proxy/blob/main/README.md)  
 示例请求：`https://your-worker-url.com/https://example.com/`  
 将`your-worker-url.com`替换为您的`Cloudflare Workers URL`，`example.com`替换为您要代理的目标网站的地址  
 
 ## `_workers4.js` 说明
-反向代理加速任意的单个网站  
+搭建任意的单个网站的镜像  
 [使用教程](https://xiaowangye.org/posts/using-cloudflare-worker-proxy-github)  
 
 ## `_workers5.js` 说明
@@ -23,4 +23,4 @@
 [原仓库](https://github.com/xixu-me/Proxy-Everything) 
 
 ## `_workers6.js` 说明
-有前端网页，与5类似
+在线代理服务器，有前端网页
