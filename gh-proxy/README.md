@@ -4,21 +4,17 @@
 
 github release、archive以及项目文件的加速项目，支持clone，有Cloudflare Workers无服务器版本以及Python版本  
 
-项目地址1：https://github.com/hunshcn/gh-proxy  
-          代码：`_workers.js`
+项目1：github镜像代理 <https://github.com/hunshcn/gh-proxy>  
+       代码：`_workers.js`
+       可镜像githu网页以及文件下载地址  
+       演示：<https://gh.api.99988866.xyz/>
 
-项目地址2：https://github.com/crazypeace/gh-proxy  
-          代码：`_workers2.js`  
+项目2：github镜像代理 <https://github.com/crazypeace/gh-proxy>  
+       代码：`_workers2.js`  
+       增加支持 `api.github.com`和`git.io`；可镜像一键脚本
+       演示：<https://ghproxy.crazypeace.workers.dev/>
 
-项目3：网页前端在线代理     
-          代码：`_workers3.js`  
-
-## 演示
-
-https://gh.api.99988866.xyz/  
-
-
-## 使用
+## 项目1的使用
 
 直接在copy出来的url前加`https://gh.api.99988866.xyz/`即可
 
@@ -59,3 +55,6 @@ https://gh.api.99988866.xyz/
 ## Cloudflare Workers计费
 
 到 `overview` 页面可参看使用情况。免费版每天有 10 万次免费请求，并且有每分钟1000次请求的限制。
+
+
+
