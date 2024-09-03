@@ -14,7 +14,7 @@
 将`your-worker-url.com`替换为您的`Cloudflare Workers URL`，`example.com`替换为您要代理的目标网站的地址  
 
 ## `_workers4.js` 说明
-反向代理加速github  
+反向代理加速任意的单个网站  
 [使用教程](https://xiaowangye.org/posts/using-cloudflare-worker-proxy-github)  
 
 ## `_workers5.js` 说明
