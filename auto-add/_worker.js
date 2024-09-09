@@ -5,9 +5,10 @@ addEventListener('fetch', event => {
 async function handleRequest(request) {
   // 定义你要自动访问的多个网址
   const urls = [
-    'https://example1.com',
-    'https://example2.com',
-    'https://example3.com'
+    'https://yutian.nyc.mn/',
+    'https://yuzong.nyc.mn/',
+    'https://vps.yutian81.top/',
+    'https://domains.yutian81.top/'
   ];
 
   // 遍历每个网址并发送请求
