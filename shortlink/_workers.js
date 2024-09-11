@@ -1,17 +1,17 @@
 const config = {
-  result_page: false, // After get the value from KV, if use a page to show the result.
-  theme: "", // Homepage theme, use the empty value for default theme. To use urlcool theme, please fill with "theme/urlcool" .
-  cors: true, // Allow Cross-origin resource sharing for API requests.
-  unique_link: false, // If it is true, the same long url will be shorten into the same short url
-  custom_link: true, // Allow users to customize the short url.
-  overwrite_kv: false, // Allow user to overwrite an existed key.
-  snapchat_mode: false, // The link will be distroyed after access.
-  visit_count: false, // Count visit times.
-  load_kv: false, // Load all from Cloudflare KV
-  system_type: "shorturl", // shorturl, imghost, other types {pastebin, journal}
+  result_page: false, // 获取KV的值之后，用页面来显示结果
+  theme: "", // 首页主题, 留空使用默认主题. 如果要使用 urlcool 主题, 请填写 "theme/urlcool" 
+  cors: true, // 允许 API 请求的跨源资源共享
+  unique_link: true, // 如果为 true ，相同的长网址将被缩短为相同的短网址
+  custom_link: true, // 允许用户自定义短网址
+  overwrite_kv: false, // 允许用户覆盖现有的密钥
+  snapchat_mode: false, // 访问后链接将会失效
+  visit_count: false, // 计算访问次数
+  load_kv: false, // 从 Cloudflare KV 加载所有内容
+  system_type: "shorturl", // shorturl, imghost, 其他类型 {pastebin, journal}
 }
 
-// key in protect_keylist can't read, add, del from UI and API
+// protect_keylist 中的密钥无法从 UI 和 API 读取、添加、删除
 const protect_keylist = [
   "password",
 ]
@@ -23,7 +23,7 @@ const html404 = `<!DOCTYPE html>
   <html>
   <body>
     <h1>404 Not Found.</h1>
-    <p>The url you visit is not found.</p>
+    <p>您访问的网址不存在</p>
     <p> <a href="https://github.com/crazypeace/Url-Shorten-Worker/" target="_self">Fork me on GitHub</a> </p>
   </body>
   </html>`
@@ -55,7 +55,7 @@ function base64ToBlob(base64String) {
 
 async function randomString(len) {
   len = len || 6;
-  let chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /*去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1 *** Easily confused characters removed */
+  let chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /*去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1 */
   let maxPos = chars.length;
   let result = '';
   for (i = 0; i < len; i++) {
