@@ -1,31 +1,59 @@
 ## 自行部署web端SSH服务
 
+## 项目一
+
 ### 部署容器
-<https://dashboard.render.com>  
+[northflank](https://app.northflank.com)
 
 ### 部署教程
 <https://zelikk.blogspot.com/2023/10/huashengdun-webssh-codesandbox.html>  
-- 类型选择：`web service`
-- 导入github项目：`https://github.com/crazypeace/huashengdun-webssh`
-- 项目名称：随便填
-- 服务器位置：选择一个离你近的
-- 语言选择：`python3`
-- 启动命令行：`python run.py --xsrf=False --xheaders=False --origin='*' --debug --delay=6`
-- 点击部署
-- 部署完成点击左侧`设置`，添加`自定义域`，在cf中创建一条`CNAME`记录指向分配给你的域名
-- 等待解析生效后访问你的自定义域名
+
+- fork项目，[点击打开](https://github.com/crazypeace/huashengdun-webssh)
+- 进入[northflank](https://app.northflank.com)官网，创建一个项目，再新建一个服务
+- 类型：`service`；名称：随便填，自己知道就行
+- 选择自己在github中fork的项目
+- 构建类型：`dockerfile`
+- 在`dockerfile`最后一行添加命令：`CMD ["python", "run.py", "--xsrf=False --xheaders=False --origin='*' --debug --delay=6"]`
+- 点击`updata dockerfile`
+- 端口设置为`8888`，协议选`http`，公开端口`打勾`，端口名称：随便填，自己知道就行
+- 资源：选择免费的最大资源，实例编号：选`1`
+- 点击`creat service`，等待搭建完成
+- 可选绑定自定义域名
 
 ### 部署示例
 <https://ssh.yzong.us.kg>  
 
-### webssh的github项目
-带`ssh link`功能的：<https://github.com/crazypeace/huashengdun-webssh>
-  - 缺点：不带`sftp`功能  
+### 优缺点
+- 支持sshlink一键登录
+- 支持交互式密码和私钥登录
+- 不带`sftp`功能  
 
-带简易`sftp`（支持上传下载）功能的：<https://github.com/Jrohy/webssh>
-  - 缺点：不带私钥登录功能
+----
+## 项目二
+
+### 拉取docker镜像部署到 [koyeb](https://app.koyeb.com)
+- git项目：<https://github.com/Jrohy/webssh>
+
+### 部署过程
+
+- 点击创建服务，选择docker镜像方式
+- 填入镜像地址`jrohy/webssh:latest`, 点击下一步
+- 设置环境变量
+```
+GIN_MODE=release
+TZ=Asia/Shanghai
+savePass=true
+```
+- 设置端口：`5032`
+- 点击部署，等待完成
+- koyeb免费版不支持自定义域名，可以通过cf搭建反代或cname来自定义域
+
+### 优缺点
+- 支持`sftp`（支持上传下载）功能
+- 不支持交互式密码和私钥登录功能
 
 ### 其他可用示例
 CMLiu：<https://ssh.090227.xyz>  
 DCI云：<https://webssh.duckyci.com>  
 AC云：<https://webssh.anyfastcloud.com/>  
+electerm-web：<https://electerm-demo.html5beta.com/>
