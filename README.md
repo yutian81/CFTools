@@ -4,8 +4,9 @@
 ## 项目列表
 | 文件夹 | 作用 | 链接 |
 | ------ | ----- | ----- |
+| ASN-CIDR | 搭建通过asn获取ip段的api | [LINK](https://github.com/yutian81/CFTools/tree/main/ASN-CIDR) |
 | CFDocker-proxy | Dock官方仓库镜像 | [LINK](https://github.com/yutian81/CFTools/tree/main/CFDocker-proxy) |
-| CFForum | 搭建自己的论坛 | [LINK](https://github.com/yutian81/CFTools/tree/main/CFForum) |
+| CFIP-Auto | 通过公开网页抓取ip、自动测速并自动写入域名dns | [LINK](https://github.com/yutian81/CFTools/tree/main/CFIP-Auto) |
 | CFcdn-proxy | 将任意服务（域名或IP）通过CF进行反代，加速访问 | [LINK](https://github.com/yutian81/CFTools/tree/main/CFcdn-proxy) |
 | Edit-Image | 处理图片, 支持缩放、剪裁、水印、滤镜等功能 | [LINK](https://github.com/yutian81/CFTools/tree/main/Edit-Image) |
 | GGDrive | 将 Google Drive 文件以目录形式列出，并直连下载 | [LINK](https://github.com/yutian81/CFTools/tree/main/GGDrive) |
@@ -14,7 +15,8 @@
 | NavSite | 搭建属于自己的导航网站 | [LINK](https://github.com/yutian81/CFTools/tree/main/NavSite) |
 | ODProxy | 挂载onedrive网盘实现高速下载 | [LINK](https://github.com/yutian81/CFTools/tree/main/ODProxy) |
 | WarpTools | 与warp相关的一些工具 | [LINK](https://github.com/yutian81/CFTools/tree/main/WarpTools) |
-| aotoplan | 通过CF创建计划任务，用于一些保活项目 | [LINK](https://github.com/yutian81/CFTools/tree/main/aotoplan) |
+| aotoplan | 通过CF创建计划任务，用于一些保活项目，带可视化面板 | [LINK](https://github.com/yutian81/CFTools/tree/main/aotoplan) |
+| auto-add | 定时自动访问指定的网页 | [LINK](https://github.com/yutian81/CFTools/tree/main/auto-add) |
 | cloud-note | 搭建一个云记事本 | [LINK](https://github.com/yutian81/CFTools/tree/main/cloud-note) |
 | cohere2openai | 将 Cohere API 转换为 OpenAI API | [LINK](https://github.com/yutian81/CFTools/tree/main/cohere2openai) |
 | file-share | 一个轻量级的文件分享工具和在线剪贴板 | [LINK](https://github.com/yutian81/CFTools/tree/main/file-share) |
