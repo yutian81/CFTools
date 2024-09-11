@@ -1,0 +1,40 @@
+name: SGIP Speed Test
+
+on:
+  workflow_dispatch:  # 手动触发
+  schedule:
+    - cron: '0 8,14,20,2 * * *'  # 每6小时整点运行一次，可以根据需求调整
+
+jobs:
+  ip-speed-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'latest'
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y curl && sudo apt-get install -y bash
+
+    - name: Run shell script
+      run: |
+        chmod +x FDIP-cesu.sh
+        ./FDIP-cesu.sh
+
+    - name: Commit and push results
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add FDIP/all.txt CloudflareST/sg.txt CloudflareST/sgcs.txt CloudflareST/sg.csv
+        git commit -m "Add SG fdIPs with speed > 5mb/s"
+        git push
