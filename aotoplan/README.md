@@ -1,32 +1,35 @@
-# Cronbin
+# Cronbin 自动化访问指定的网页
 
-## Dev
+## 开发
 
-> Install Deno first
+>  先安装 Deno
 
 ```bash
 make cronserve
 # or: deno run -A --watch ./scripts/cronbin/serve.js ./scripts/cronbin/serve.js
 ```
 
-## Deploy
+## 在 CF WORKER 上部署
 
-1. Create a KV namespane on [Cloudfalre](https://dash.cloudflare.com/) Workers panel with name `CRONBIN`
-2. Create a worker on [Cloudfalre](https://dash.cloudflare.com/) workers panel, you can name it `cronbin`, then bind the KV created at step 1, go to settings -> Variables -> KV Namespace Bindings ,`name: `CRONBIN`.
-3. Quick Edit worker code, with <https://github.com/theowenyoung/blog/blob/main/scripts/cronbin/main.js> , change the APIKEY, save it.
-4. Go the the worker triggers settings, add cron trigger, `every 1 minutes`.
-5. You can also add a custom domain on triggers settings.
+1. 创建一个KV命名空间，名称为`CRONBIN`
+2. 创建一个 worker，名称随意, 绑定刚刚创建的KV空间，名称: `CRONBIN`
+3. 复制[此处代码](https://github.com/theowenyoung/blog/blob/main/scripts/cronbin/main.js)到worker中
+4. 修改`APIKEY`，默认为`abc`，点击`保存并部署`
+5. 【可选】给项目绑定自定义域
+6. 到 worker 项目的`设置`——`触发器`——`corn触发器`，添加corn触发器
 
-Step 4 screenshot:
+第5、6步截图
 
 ![add triger](./add-trigger.png)
 
-## Usage
+## 使用
 
-First, visit <https://yourdomain.com/?key=abc>, then, the browser will remember your cookie, so next time, we can visit <https://yourdomain.com/> directly.
+访问 <https://yourdomain.com/?key=abc>，`abc`修改为你自定义的`APIKEY`
 
-## Screenshot
+然后，浏览器会记住您的 cookie，以便下次我们可以直接访问 https://yourdomain.com
+
+## 面板截图
 
 ![screenshot](./cronbin3.png)
 
-The checkbox is if enabled the task
+如果启用任务，则勾选复选框；去掉勾选，则任务不生效
