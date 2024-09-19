@@ -8,12 +8,12 @@ async function handleRequest(request) {
   // 检查路径是否是 AList 图片服务
   if (url.pathname.startsWith('/img')) {
     // 将 '/img' 替换为 AList 图片的直链路径
-    const targetUrl = 'https://p5244--alist--sykk8bwr425w.code.run/dav/阿里图片' + url.pathname.replace('/img', '')
+    const targetUrl = 'https://p****--alist--sykk8bwr425w.code.run/dav/阿里图片' + url.pathname.replace('/img', '')
     return proxyRequest(targetUrl, request)
   }
 
   // 默认图床服务路径
-  const targetUrl = 'https://p80--lskypro--sykk8bwr425w.code.run' + url.pathname
+  const targetUrl = 'https://p****--lskypro--sykk8bwr425w.code.run' + url.pathname
   return proxyRequest(targetUrl, request)
 }
 
