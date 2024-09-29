@@ -21,3 +21,19 @@ export default {
   },
 };
 
+//--------------------------------------------------------------------------
+//方案3-反代伪装域名下某个路径(可以Page)-外部自定义变量
+//变量名：HOSTNAME，变量值：需要反代的域名，不要http(s)
+//变量名：PROTOCOL，变量值：传输协议，填http或https
+//变量名：PATHNAME，变量值：域名后的路径，不用带/，代码会自动在前面附加/
+export default {
+  async fetch(request, env) {
+    let url = new URL(request.url);
+    // 使用外部环境变量，如果未定义，则使用默认值
+    url.hostname = env.HOSTNAME || 'cdn.cloudflare.steamstatic.com';
+    url.protocol = env.PROTOCOL || 'https';
+    let pathname = env.PATHNAME || 'steam';
+    url.pathname = `/${pathname}`; // 给外部变量值自动附加前斜杠 
+    return fetch(new Request(url, request));
+  },
+};
