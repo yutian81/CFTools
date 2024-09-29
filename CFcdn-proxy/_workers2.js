@@ -37,3 +37,22 @@ export default {
     return fetch(new Request(url, request));
   },
 };
+
+//----------------------------------------------------------------------------
+//方案4-动态反代伪装域名下任意路径(可以Page)
+//变量名：HOSTNAME，变量值：需要反代的域名，不要http(s)
+//变量名：PROTOCOL，变量值：传输协议，填http或https
+//目标网址的路径由worker自定义域名的路径动态决定
+//如：访问 https://自定义域名/路径abc = 访问 https://目标地址/路径abc
+export default {
+  async fetch(request, env) {
+    let url = new URL(request.url);    
+    // 使用外部环境变量，如果未定义，则使用默认值
+    url.hostname = env.HOSTNAME || 'cdn.cloudflare.steamstatic.com';
+    url.protocol = env.PROTOCOL || 'https';    
+    // 获取当前请求的 pathname，并用它来设置目标路径
+    let requestPathname = new URL(request.url).pathname;
+    url.pathname = requestPathname;
+    return fetch(new Request(url, request));
+  },
+};
