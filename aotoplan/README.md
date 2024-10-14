@@ -28,6 +28,17 @@ make cronserve
 
 然后，浏览器会记住您的 cookie，以便下次我们可以直接访问 https://yourdomain.com
 
+## TG通知代码模板
+> 在面板下方填入
+```bash
+curl --location 'https://api.telegram.org/bot1351044089:xxxxxxxxxxxxxxx/sendMessage' \
+--header 'Content-Type: application/json' \
+--data '{
+    "chat_id":"-100000000000",
+    "text":"{{message}}"
+}'
+```
+
 ## 面板截图
 
 ![screenshot](./cronbin3.png)
