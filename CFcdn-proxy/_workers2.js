@@ -1,4 +1,6 @@
 // 方案1-反代域名-简版(可以page)
+//直接将请求的主机名设置为 api.cbcd.com，并强制协议为 https。
+//没有对路径进行任何检查，所有请求都会被反向代理到 api.cbcd.com。
 export default {
   async fetch(request, env) {
     let url = new URL(request.url);
@@ -9,7 +11,23 @@ export default {
 };
 
 //----------------------------------------------------------------------------
-// 方案2-反代目标域名下某个路径(可以Page)
+//方案2：在处理请求时，首先检查请求的路径是否以 / 开头
+//如果是，它会将请求的主机名修改为 example.com，然后创建一个新的请求并发送
+//如果路径不以 / 开头，则返回 env.ASSETS.fetch(request)，这可能是用于处理静态资源的请求
+export default {
+    async fetch(request, env) {
+      let url = new URL(request.url);
+      if (url.pathname.startsWith('/')) {
+        url.hostname="example.com"; /*改为你需要加速的主机名A（非Cloudlfare服务的域名也可以）*/
+        let new_request=new Request(url,request);
+        return fetch(new_request);
+      }
+      return env.ASSETS.fetch(request);
+    }
+  };
+
+//----------------------------------------------------------------------------
+// 方案3-反代目标域名下某个路径(可以Page)
 export default {
   async fetch(request, env) {
     let url = new URL(request.url);
