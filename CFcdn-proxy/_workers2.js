@@ -4,7 +4,7 @@
 export default {
   async fetch(request, env) {
     let url = new URL(request.url);
-    url.hostname = 'api.cbcd.com'; // 设置需要反代的地址
+    url.hostname = "uptime-yzong-efe57cea.koyeb.app"; // 设置需要反代的地址
     url.protocol = "https";
     return fetch(new Request(url, request));
   },
@@ -18,7 +18,7 @@ export default {
     async fetch(request, env) {
       let url = new URL(request.url);
       if (url.pathname.startsWith('/')) {
-        url.hostname="example.com"; /*改为你需要加速的主机名A（非Cloudlfare服务的域名也可以）*/
+        url.hostname="uptime-yzong-efe57cea.koyeb.app"; /*改为你需要加速的主机名A（非Cloudlfare服务的域名也可以）*/
         let new_request=new Request(url,request);
         return fetch(new_request);
       }
@@ -66,7 +66,7 @@ export default {
   async fetch(request, env) {
     let url = new URL(request.url);    
     // 使用外部环境变量，如果未定义，则使用默认值
-    url.hostname = env.HOSTNAME || 'cdn.cloudflare.steamstatic.com';
+    url.hostname = env.HOSTNAME || 'uptime-yzong-efe57cea.koyeb.app';
     url.protocol = env.PROTOCOL || 'https';    
     // 获取当前请求的 pathname，并用它来设置目标路径
     let requestPathname = new URL(request.url).pathname;
