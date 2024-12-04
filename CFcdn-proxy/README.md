@@ -21,3 +21,6 @@
 
 ## `_workers6.js` 说明
 在线代理服务器，有前端网页
+
+## `_worker7.js` 说明
+多cf代理项目worker负载均衡
