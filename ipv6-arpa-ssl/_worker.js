@@ -49,9 +49,9 @@ async function handleApiRequest(request, queryParams) {
           }), {
               status: 400,
               headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-            }
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+          }
           });
       }
       
@@ -218,6 +218,7 @@ function getHTML() {
     
     input[type="text"], 
     input[type="email"],
+    textarea,
     .ca-select-style {
         width: 100%;
         padding: 12px 15px;
@@ -229,6 +230,7 @@ function getHTML() {
         font-size: 16px;
         color: #2c3e50;
         transition: all 0.3s;
+        resize: none;
     }
     
     .ca-select-style {
@@ -237,6 +239,7 @@ function getHTML() {
 
     input[type="text"]:focus, 
     input[type="email"]:focus,
+    textarea:focus,
     .ca-select-style:focus {
         border-color: #3498db;
         box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
@@ -272,6 +275,9 @@ function getHTML() {
         align-items: center;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
     }
+
+    .info-box .btn#generate-btn { margin-top: 15px; }
+    .info-box .btn#generate-btn i { position: relative; top: 1px; }
     
     .btn:hover {
         transform: translateY(-2px);
@@ -365,7 +371,7 @@ function getHTML() {
       .form-row { flex-direction: column; gap: 0; }
       .form-group.half-width { margin-bottom: 20px; }
       .footer { font-size: 0.8em; }
-    }  
+    }
   </style>
 </head>
 <body>
@@ -373,21 +379,21 @@ function getHTML() {
     <h1>IP6.ARPA域名自动添加SSL证书</h1>
     
     <div class="registration-buttons">
-      <a href="https://tb.netassist.ua" class="register-btn" target="_blank">ip6.arpa 注册地址1</a>
-      <a href="https://dns.he.net" class="register-btn" target="_blank">ip6.arpa 注册地址2</a>
-      <a href="https://tunnelbroker.net/" class="register-btn" target="_blank">ip6.arpa 注册地址3</a>
+      <a href="https://tb.netassist.ua" class="register-btn" target="_blank"><i class="fas fa-registered"></i> ip6.arpa 注册地址1</a>
+      <a href="https://dns.he.net" class="register-btn" target="_blank"><i class="fas fa-registered"></i> ip6.arpa 注册地址2</a>
+      <a href="https://tunnelbroker.net/" class="register-btn" target="_blank"><i class="fas fa-registered"></i> ip6.arpa 注册地址3</a>
     </div>
     
     <form id="ssl-form">
       <div class="form-row">
           <div class="form-group half-width">
-              <label for="email">Cloudflare注册邮箱 (Email)</label>
+              <label for="email"><i class="fas fa-envelope"></i> Cloudflare注册邮箱 (Email)</label>
               <input type="email" id="email" placeholder="请输入您的Cloudflare邮箱">
               <div class="error-message" id="email-error">请输入有效的邮箱地址</div>
           </div>
           
           <div class="form-group half-width">
-              <label for="zone-id">区域ID (Zone ID)</label>
+              <label for="zone-id"><i class="fas fa-id-card"></i> 区域ID (Zone ID)</label>
               <input type="text" id="zone-id" placeholder="请输入您的区域ID">
               <div class="error-message" id="zone-id-error">请输入区域ID</div>
           </div>
@@ -395,13 +401,13 @@ function getHTML() {
       
       <div class="form-row">
           <div class="form-group half-width">
-              <label for="api-key">全局API密钥 (API Key)</label>
+              <label for="api-key"><i class="fas fa-key"></i> 全局API密钥 (API Key)</label>
               <input type="text" id="api-key" placeholder="请输入您的API密钥">
               <div class="error-message" id="api-key-error">请输入API密钥</div>
           </div>
           
           <div class="form-group half-width">
-              <label for="ca-select">证书颁发机构 (CA)</label>
+              <label for="ca-select"><i class="fas fa-landmark"></i> CA证书颁发机构</label>
               <select id="ca-select" class="ca-select-style">
                   <option value="ssl_com">SSL.com (默认)</option>
                   <option value="lets_encrypt">Let's Encrypt</option>
@@ -413,7 +419,7 @@ function getHTML() {
 
       <button type="submit" class="btn" id="submit-btn">
           <div class="spinner" id="spinner"></div>
-          <span id="btn-text">添加SSL证书</span>
+          <span id="btn-text"><i class="fas fa-plus-circle"></i> 添加 SSL 证书</span>
       </button>
     </form>
     
@@ -423,16 +429,16 @@ function getHTML() {
       <h2>IP6.ARPA 域名生成工具</h2>
       <div class="form-row" style="margin-top: 15px;">
         <div class="form-group half-width">
-          <label for="ipv6-cidr">输入 IPv6 CIDR 地址</label>
+          <label for="ipv6-cidr"><i class="fas fa-network-wired"></i> 输入 IPv6 CIDR 地址</label>
           <input type="text" id="ipv6-cidr" placeholder="请输入 IPv6 CIDR, 例如: 2001:DB8::/48">
           <div class="error-message" id="ipv6-cidr-error">请输入有效的 IPv6 CIDR</div>
+          <button type="button" class="btn" id="generate-btn"><i class="fas fa-sync-alt"></i>&nbsp;生成 IP6.ARPA 域名</button>
         </div>
         <div class="form-group half-width">
-          <label for="generated-domain">生成的 IP6.ARPA 域名</label>
-          <input type="text" id="generated-domain" readonly placeholder="生成结果将显示在这里">
+          <label for="generated-domain"><i class="fas fa-check-circle"></i> IP6.ARPA 域名生成结果</label>
+          <textarea id="generated-domain" readonly rows="4" placeholder="生成结果将显示在这里"></textarea> 
         </div>
       </div>
-      <button type="button" class="btn" id="generate-btn">生成 IP6.ARPA 域名</button>
     </div>    
 
     <div class="info-box">
@@ -452,261 +458,268 @@ function getHTML() {
   // ==========================================================
   // 域名生成逻辑 (支持随机子域名生成)
   // ==========================================================
-  
-  // 辅助函数：将缩写的 IPv6 地址 (如 2001:db8::1) 展开为完整的 32 位十六进制字符串
+
+  // 辅助函数：将缩写的 IPv6 地址展开为完整的 32 位十六进制字符串
   function expandIpv6(ipv6) {
-    ipv6 = ipv6.toLowerCase();
-  
-    // 检查是否有 '::' 缩写
-    if (!ipv6.includes('::')) {
-      // 没有缩写，直接填充并连接
-      return ipv6.split(':').map((block) => block.padStart(4, '0')).join('');
-    }
-  
-    const parts = ipv6.split('::');
-    const leftBlocks = parts[0].split(':').filter(Boolean);
-    const rightBlocks = parts[1].split(':').filter(Boolean);
-  
-    const existingBlocksCount = leftBlocks.length + rightBlocks.length;
-    const zeroBlocksCount = 8 - existingBlocksCount;
-  
-    if (zeroBlocksCount < 0) {
-      throw new Error('IPv6 地址块过多，格式错误。');
-    }
-  
-    const zeroPadding = Array(zeroBlocksCount).fill('0000').join('');
-  
-    // 填充左侧和右侧的块，然后合并
-    const fullLeft = leftBlocks.map((block) => block.padStart(4, '0')).join('');
-    const fullRight = rightBlocks.map((block) => block.padStart(4, '0')).join('');
-  
-    return fullLeft + zeroPadding + fullRight;
+      ipv6 = ipv6.toLowerCase();
+
+      // 检查是否有 '::' 缩写
+      if (!ipv6.includes('::')) {
+          return ipv6.split(':').map((block) => block.padStart(4, '0')).join('');
+      }
+
+      const parts = ipv6.split('::');
+      const leftBlocks = parts[0].split(':').filter(Boolean);
+      const rightBlocks = parts[1].split(':').filter(Boolean);
+
+      const existingBlocksCount = leftBlocks.length + rightBlocks.length;
+      const zeroBlocksCount = 8 - existingBlocksCount;
+
+      if (zeroBlocksCount < 0) {
+          throw new Error('IPv6 地址块过多，格式错误。');
+      }
+
+      const zeroPadding = Array(zeroBlocksCount).fill('0000').join('');
+
+      // 填充左侧和右侧的块，然后合并
+      const fullLeft = leftBlocks.map((block) => block.padStart(4, '0')).join('');
+      const fullRight = rightBlocks.map((block) => block.padStart(4, '0')).join('');
+      return fullLeft + zeroPadding + fullRight;
   }
-  
+
   // 辅助函数：生成指定长度的随机十六进制字符串
   function randomHex(length) {
-    let result = '';
-    const characters = '0123456789abcdef';
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return result;
+      let result = '';
+      const characters = '0123456789abcdef';
+      for (let i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return result;
   }
-  
-  // 生成 IPv6 地址的反向域名 (IP6.ARPA)。
-  function getRandomIpv6InCidr(cidr) {
-    const parts = cidr.split('/');
-  
-    if (parts.length !== 2) {
-      throw new Error('CIDR 格式不正确，请使用 IP/前缀长度 格式。');
-    }
-  
-    const ipv6 = parts[0].trim();
-    const prefixLength = parseInt(parts[1], 10);
-  
-    if (isNaN(prefixLength) || prefixLength < 0 || prefixLength > 128 || prefixLength % 4 !== 0) {
-      throw new Error('前缀长度无效，必须是 4 的倍数 (例如: /32, /48, /64)。');
-    }
-  
-    const fullHex = expandIpv6(ipv6); // 获取完整的 32 字符十六进制地址
-    const hexCharsInPrefix = prefixLength / 4; // 计算前缀和随机部分长度
-    const hexCharsInRandom = 32 - hexCharsInPrefix;
-    const networkPrefix = fullHex.substring(0, hexCharsInPrefix); // 截取固定的网络前缀部分
-    const randomHostId = randomHex(hexCharsInRandom); // 生成主机 ID 的随机部分
-    const randomFullHex = networkPrefix + randomHostId; // 组合完整的 32 位随机 IPv6 地址 (十六进制)
-    const arpaPrefix = networkPrefix; // 计算反向域名 (只反转前缀部分)
-    const reversed = arpaPrefix.split('').reverse().join('.');
-    return reversed + '.ip6.arpa';
+
+  // 生成 ipv6 反向根域名
+  function generateArpaRootDomain(cidr) {
+      const parts = cidr.split('/');
+
+      if (parts.length !== 2) {
+          throw new Error('CIDR 格式不正确，请使用 IP/前缀长度 格式。');
+      }
+
+      const ipv6 = parts[0].trim();
+      const prefixLength = parseInt(parts[1], 10);
+
+      if (isNaN(prefixLength) || prefixLength < 0 || prefixLength > 128 || prefixLength % 4 !== 0) {
+          throw new Error('前缀长度无效，必须是 4 的倍数 (例如: /32, /48, /64)。');
+      }
+
+      const fullHex = expandIpv6(ipv6); // 获取完整的 32 字符十六进制地址
+      const hexCharsInPrefix = prefixLength / 4; // 截取固定的网络前缀部分
+      const networkPrefix = fullHex.substring(0, hexCharsInPrefix);
+      const reversed = networkPrefix.split('').reverse().join('.'); // 反转并用 '.' 分隔
+      return reversed + '.ip6.arpa'; // 拼接后缀
   }
-  
+
+  // 生成随机前缀域名
+  function generateRandomPrefixDomains(baseArpaDomain) {
+      const domains = [baseArpaDomain]; // 根域名
+
+      for (let i = 0; i < 3; i++) {
+          // 生成 1 到 4 位长的随机十六进制字符串
+          const randomLength = Math.floor(Math.random() * 4) + 1; // 1 to 4
+          const prefix = randomHex(randomLength).split('').join('.');
+          domains.push(prefix + '.' + baseArpaDomain); 
+      }
+      return domains;
+  }
+
   // ==========================================================
-  // DOM 交互逻辑 (包含 localStorage)
+  // DOM 交互逻辑
   // ==========================================================
-  
+
   // 辅助函数：从本地存储加载 CIDR
   function loadSavedCidr() {
-    const savedCidr = localStorage.getItem('ipv6Cidr');
-    if (savedCidr) {
-      document.getElementById('ipv6-cidr').value = savedCidr;
-    }
+      const savedCidr = localStorage.getItem('ipv6Cidr');
+      if (savedCidr) {
+          document.getElementById('ipv6-cidr').value = savedCidr;
+      }
   }
-  
+
   // 辅助函数：保存 CIDR 到本地存储
   function saveCidr(cidr) {
-    localStorage.setItem('ipv6Cidr', cidr);
+      localStorage.setItem('ipv6Cidr', cidr);
   }
-  
+
   // 辅助函数：显示字段错误
   function showError(fieldId, message) {
-    const field = document.getElementById(fieldId);
-    const errorElement = document.getElementById(fieldId + '-error');
-  
-    field.classList.add('error');
-    errorElement.textContent = message;
-    errorElement.style.display = 'block';
-    if (!document.querySelector('.error:focus')) {
-      field.focus();
-    }
+      const field = document.getElementById(fieldId);
+      const errorElement = document.getElementById(fieldId + '-error');
+
+      field.classList.add('error');
+      errorElement.textContent = message;
+      errorElement.style.display = 'block';
+      if (!document.querySelector('.error:focus')) {
+          field.focus();
+      }
   }
-  
+
   // 辅助函数：重置所有错误状态
   function resetErrors() {
-    const errorFields = document.querySelectorAll('.error');
-    const errorMessages = document.querySelectorAll('.error-message');
-    errorFields.forEach((field) => {
-      field.classList.remove('error');
-    });
-    errorMessages.forEach((message) => {
-      message.style.display = 'none';
-    });
+      const errorFields = document.querySelectorAll('.error');
+      const errorMessages = document.querySelectorAll('.error-message');
+      errorFields.forEach((field) => {
+          field.classList.remove('error');
+      });
+      errorMessages.forEach((message) => {
+          message.style.display = 'none';
+      });
   }
-  
+
   // 辅助函数：显示操作结果
   function showResult(message, type) {
-    const resultElement = document.getElementById('result-message');
-    resultElement.textContent = message;
-    resultElement.className = 'result';
-    resultElement.classList.add(type === 'success' ? 'success' : 'error-result');
-    resultElement.style.display = 'block';
-    resultElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      const resultElement = document.getElementById('result-message');
+      resultElement.textContent = message;
+      resultElement.className = 'result';
+      resultElement.classList.add(type === 'success' ? 'success' : 'error-result');
+      resultElement.style.display = 'block';
+      resultElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
-  
+
   // 辅助函数：执行复制操作 (仅使用 Clipboard API)
   async function copyTextToClipboard(text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      try {
-        await navigator.clipboard.writeText(text);
-        return true;
-      } catch (err) {
-        console.warn('Clipboard API 复制失败或权限被拒绝:', err);
-        return false;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+              await navigator.clipboard.writeText(text);
+              return true;
+          } catch (err) {
+              console.warn('Clipboard API 复制失败或权限被拒绝:', err);
+              return false;
+          }
+      } else {
+          console.warn('浏览器不支持 navigator.clipboard API。');
+          return false;
       }
-    } else {
-      console.warn('浏览器不支持 navigator.clipboard API。');
-      return false;
-    }
   }
-  
+
   // ==========================================================
   // 页面初始化和事件监听
   // ==========================================================
   document.addEventListener('DOMContentLoaded', function () {
-    // 1. 加载保存的 CIDR
-    loadSavedCidr();
-  
-    // 2. 监听 CIDR 输入，实时保存
-    document.getElementById('ipv6-cidr').addEventListener('input', function (e) {
-      saveCidr(e.target.value.trim());
-    });
-  
-    // 3. 事件监听：IPv6 域名生成 (调用随机生成函数)
-    document.getElementById('generate-btn').addEventListener('click', async function () {
-      resetErrors();
-      const cidrInput = document.getElementById('ipv6-cidr');
-      const domainOutput = document.getElementById('generated-domain');
-      const cidr = cidrInput.value.trim();
-      domainOutput.value = '';
-  
-      if (!cidr) {
-        showError('ipv6-cidr', '请输入 IPv6 CIDR 地址。');
-        return;
-      }
-  
-      try {
-        // 使用新的随机生成函数
-        const generatedDomain = getRandomIpv6InCidr(cidr);
-        domainOutput.value = generatedDomain;
-  
-        // 复制操作
-        const copySuccess = await copyTextToClipboard(generatedDomain);
-  
-        // 给出反馈
-        if (copySuccess) {
-          showResult('IP6.ARPA 域名生成成功，并已自动复制到剪贴板。域名: ' + generatedDomain, 'success');
-        } else {
-          showResult('IP6.ARPA 域名生成成功！自动复制失败，请手动复制。域名: ' + generatedDomain, 'success');
-        }
-      } catch (error) {
-        // 捕获生成抛出的错误
-        showError('ipv6-cidr', error.message || '生成域名失败，请检查CIDR格式。');
-        showResult('生成失败: ' + (error.message || '未知错误'), 'error');
-      }
-    });
-  
-    // 4. 事件监听：Cloudflare SSL 提交 (保持不变)
-    document.getElementById('ssl-form').addEventListener('submit', async function (e) {
-      e.preventDefault();
-  
-      // 获取输入值
-      const email = document.getElementById('email').value.trim();
-      const zoneId = document.getElementById('zone-id').value.trim();
-      const apikey = document.getElementById('api-key').value.trim();
-      const caSelect = document.getElementById('ca-select').value;
-  
-      // 重置错误状态
-      resetErrors();
-  
-      // 验证输入
-      let isValid = true;
-      if (!email) {
-        showError('email', '请输入有效的邮箱地址');
-        isValid = false;
-      }
-      if (!zoneId) {
-        showError('zone-id', '请输入区域ID');
-        isValid = false;
-      }
-      if (!apikey) {
-        showError('api-key', '请输入API密钥');
-        isValid = false;
-      }
-      if (!isValid) return;
-  
-      // 显示加载状态
-      document.getElementById('spinner').style.display = 'block';
-      document.getElementById('btn-text').textContent = '添加中...';
-      document.getElementById('submit-btn').disabled = true;
-  
-      try {
-        // 发送请求到 Worker API
-        const response = await fetch('/api/add-ssl', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: email,
-            zoneId: zoneId,
-            apikey: apikey,
-            enabled: true,
-            ca: caSelect,
-          }),
-        });
-  
-        const data = await response.json();
-  
-        // 显示结果
-        if (data.success) {
-          showResult('证书添加成功，请10分钟后在Cloudflare该域名里检查SSL/TLS证书', 'success');
-        } else {
-          let errorMsg = '添加证书失败';
-          if (data.errors && data.errors.length > 0) {
-            errorMsg += ': ' + (data.errors[0].message || JSON.stringify(data.errors[0]));
-          } else if (data.errors) {
-            errorMsg += ': ' + JSON.stringify(data.errors);
+      // 1. 加载保存的 CIDR
+      loadSavedCidr();
+
+      // 2. 监听 CIDR 输入，实时保存
+      document.getElementById('ipv6-cidr').addEventListener('input', function (e) {
+          saveCidr(e.target.value.trim());
+      });
+
+      // 3. 事件监听: IPv6 域名生成 (调用随机生成函数)
+      document.getElementById('generate-btn').addEventListener('click', async function () {
+          resetErrors();
+          const cidrInput = document.getElementById('ipv6-cidr');
+          const domainOutput = document.getElementById('generated-domain');
+          const cidr = cidrInput.value.trim();
+          domainOutput.value = '';
+
+          if (!cidr) {
+              showError('ipv6-cidr', '请输入 IPv6 CIDR 地址。');
+              return;
           }
-          showResult(errorMsg, 'error');
-        }
-      } catch (error) {
-        showResult('请求失败，请检查网络连接', 'error');
-        console.error('Error:', error);
-      } finally {
-        // 隐藏加载状态
-        document.getElementById('spinner').style.display = 'none';
-        document.getElementById('btn-text').textContent = '添加SSL证书';
-        document.getElementById('submit-btn').disabled = false;
-      }
-    });
+
+          try {
+              const rootDomain = generateArpaRootDomain(cidr); // 生成 ARPA 根域名
+              const generatedDomains = generateRandomPrefixDomains(rootDomain); // 生成包含根域名和随机前缀的 4 个域名列表
+              const resultText = generatedDomains.join('\\n'); // 将所有域名格式化成多行文本
+              domainOutput.value = resultText; // 将所有 4 个域名赋值给 textarea
+              const copySuccess = await copyTextToClipboard(resultText); // 复制操作 (复制所有 4 个域名)
+
+              let resultMessage = 'IP6.ARPA 域名生成成功！共生成 4 个域名。';
+              if (copySuccess) {
+                  resultMessage += '所有域名已自动复制到剪贴板。';
+              } else {
+                  resultMessage += '自动复制失败，请手动复制文本框中的内容。';
+              }
+              showResult(resultMessage, 'success');
+              console.log("生成的 4 个域名:\\n" + resultText);
+          } catch (error) {
+              showError('ipv6-cidr', error.message || '生成域名失败, 请检查CIDR格式。');
+              showResult('生成失败: ' + (error.message || '未知错误'), 'error');
+          }
+        });
+
+      // 4. 事件监听: Cloudflare SSL 提交
+      document.getElementById('ssl-form').addEventListener('submit', async function (e) {
+          e.preventDefault();
+
+          // 获取输入值
+          const email = document.getElementById('email').value.trim();
+          const zoneId = document.getElementById('zone-id').value.trim();
+          const apikey = document.getElementById('api-key').value.trim();
+          const caSelect = document.getElementById('ca-select').value;
+
+          // 重置错误状态
+          resetErrors();
+
+          // 验证输入
+          let isValid = true;
+          if (!email) {
+              showError('email', '请输入有效的邮箱地址');
+              isValid = false;
+          }
+          if (!zoneId) {
+              showError('zone-id', '请输入区域ID');
+              isValid = false;
+          }
+          if (!apikey) {
+              showError('api-key', '请输入API密钥');
+              isValid = false;
+          }
+          if (!isValid) return;
+
+          // 显示加载状态
+          document.getElementById('spinner').style.display = 'block';
+          document.getElementById('btn-text').textContent = '添加中...';
+          document.getElementById('submit-btn').disabled = true;
+
+          try {
+              // 发送请求到 Worker API
+              const response = await fetch('/api/add-ssl', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                      email: email,
+                      zoneId: zoneId,
+                      apikey: apikey,
+                      enabled: true,
+                      ca: caSelect,
+                  }),
+              });
+
+              const data = await response.json();
+
+              // 显示结果
+              if (data.success) {
+                  showResult('证书添加成功, 请10分钟后在Cloudflare该域名里检查SSL/TLS证书', 'success');
+              } else {
+                  let errorMsg = '添加证书失败';
+                  if (data.errors && data.errors.length > 0) {
+                      errorMsg += ': ' + (data.errors[0].message || JSON.stringify(data.errors[0]));
+                  } else if (data.errors) {
+                      errorMsg += ': ' + JSON.stringify(data.errors);
+                  }
+                  showResult(errorMsg, 'error');
+              }
+          } catch (error) {
+              showResult('请求失败，请检查网络连接', 'error');
+              console.error('Error:', error);
+          } finally {
+              // 隐藏加载状态
+              document.getElementById('spinner').style.display = 'none';
+              document.getElementById('btn-text').textContent = '添加SSL证书';
+              document.getElementById('submit-btn').disabled = false;
+          }
+      });
   });
   </script>
 </body>
