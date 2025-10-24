@@ -564,13 +564,17 @@ function getHTML() {
         });
     }
 
-    // 保存主域名配置
-    function saveMainFormField(rootDomain) {
-        localStorage.setItem('main-email', document.getElementById('email').value.trim());
-        localStorage.setItem('main-zone-id', document.getElementById('zone-id').value.trim());
-        localStorage.setItem('main-api-key', document.getElementById('api-key').value.trim());
-        localStorage.setItem('main-ipv6-cidr', document.getElementById('ipv6-cidr').value.trim());
+    // 保存主域名配置 1/2: 保存 CIDR 和根域名 (在生成按钮点击后)
+    function saveMainCidrAndDomain(cidr, rootDomain) {
+        localStorage.setItem('main-ipv6-cidr', cidr);
         localStorage.setItem('main-root-domain', rootDomain); 
+    }
+
+    // 保存主域名配置 2/2: 仅保存授权信息 (在 NS 记录成功后追加)
+    function saveMainAuthFields(email, zoneId, apiKey) {
+        localStorage.setItem('main-email', email);
+        localStorage.setItem('main-zone-id', zoneId);
+        localStorage.setItem('main-api-key', apiKey);
     }
 
     // 加载主域名配置
@@ -639,15 +643,14 @@ function getHTML() {
             
             try {
                 const rootDomain = generateArpaRootDomain(cidr);
-                saveMainFormField(rootDomain); // 存储主域名到main配置
-                saveFormField('root-domain', rootDomain);
+                saveMainCidrAndDomain(cidr, rootDomain);
                 
                 const generatedDomains = generateRandomPrefixDomains(rootDomain);
                 const resultText = generatedDomains.join('\\n');
                 domainOutput.value = resultText;
                 saveFormField('generated-domains', domainOutput.value); // 存储所有生成的域名
   
-                let resultMessage = 'IP6.ARPA 域名生成成功！共生成 4 个域名。';
+                let resultMessage = '已成功生成 4 个 IP6.ARPA 域名，请复制保存';
                 showResult(resultMessage, 'success');
                 console.log("生成的 4 个域名:\\n" + resultText);
             } catch (error) {
@@ -783,6 +786,7 @@ function getHTML() {
                     if (data.failed && data.failed.length > 0) {
                         successMsg += \` 但有 \${data.failed.length} 条记录添加失败。\`;
                     }
+                    saveMainAuthFields(email, zoneId, apikey); // 保存主域名配置
                     showResult(successMsg, 'success');
                 } else {
                     let errorMsg = 'NS记录添加失败';
@@ -816,15 +820,22 @@ function getHTML() {
             spinner.style.display = 'block';
             submitBtn.disabled = true;
 
-            // 模拟加载过程（因为它只是从本地存储读取）
+            // 模拟加载过程（从本地存储读取）
             setTimeout(() => {
-                loadMainFormFields();
-                showResult('已加载主域名配置。', 'success');
+                const rootDomain = loadMainFormFields();
+                if (rootDomain) {
+                    const domainOutput = document.getElementById('generated-domain');
+                    domainOutput.value = rootDomain;
+                    showResult('已加载主域名配置。', 'success');
+                } else {
+                    showResult('未找到主域名配置，请先完成域名生成和NS记录添加。', 'error');
+                }
+                
                 // 恢复按钮状态
                 spinner.style.display = 'none';
                 document.getElementById('history-text').innerHTML = '<i class="fas fa-history"></i>&nbsp;获取主域名配置';
                 submitBtn.disabled = false;
-            }, 300); // 增加一个短延迟，让用户看到加载状态
+            }, 300); // 增加一个短延迟，以显示加载状态
         });
     });
     </script>
