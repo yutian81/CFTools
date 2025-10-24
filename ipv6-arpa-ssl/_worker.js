@@ -48,7 +48,10 @@ async function handleApiRequest(request, queryParams) {
               errors: ['邮箱、区域ID和API密钥都是必需的']
           }), {
               status: 400,
-              headers: { 'Content-Type': 'application/json' }
+              headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+            }
           });
       }
       
@@ -91,7 +94,6 @@ async function handleApiRequest(request, queryParams) {
           headers: {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Methods': 'GET, POST',
           }
       });
   }
