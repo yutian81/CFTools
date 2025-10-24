@@ -31,7 +31,7 @@ async function handleApiRequest(request, queryParams) {
           zone_id = body.zoneId;
           api_key = body.apikey;
           enabled = body.enabled !== undefined ? body.enabled : true;
-          certificate_authority = body.ca || "ssl_com"; 
+          certificate_authority = body.ca || "ssl_com";
       } else if (request.method === 'GET') {
           // GET 请求：从 URL 查询参数中获取
           email = queryParams.get('email');
@@ -493,7 +493,7 @@ function getHTML() {
     return result;
   }
   
-  // 生成给定 CIDR 范围内的一个随机 IPv6 地址的反向域名 (IP6.ARPA)。
+  // 生成 IPv6 地址的反向域名 (IP6.ARPA)。
   function getRandomIpv6InCidr(cidr) {
     const parts = cidr.split('/');
   
@@ -508,27 +508,14 @@ function getHTML() {
       throw new Error('前缀长度无效，必须是 4 的倍数 (例如: /32, /48, /64)。');
     }
   
-    // 1. 获取完整的 32 字符十六进制地址
-    const fullHex = expandIpv6(ipv6);
-  
-    // 2. 计算前缀和随机部分长度 (每个字符代表 4 位)
-    const hexCharsInPrefix = prefixLength / 4;
+    const fullHex = expandIpv6(ipv6); // 获取完整的 32 字符十六进制地址
+    const hexCharsInPrefix = prefixLength / 4; // 计算前缀和随机部分长度
     const hexCharsInRandom = 32 - hexCharsInPrefix;
-  
-    // 3. 截取固定的网络前缀部分
-    const networkPrefix = fullHex.substring(0, hexCharsInPrefix);
-  
-    // 4. 生成主机 ID 的随机部分
-    const randomHostId = randomHex(hexCharsInRandom);
-  
-    // 5. 组合完整的 32 位随机 IPv6 地址 (十六进制)
-    const randomFullHex = networkPrefix + randomHostId;
-  
-    // 6. 计算反向域名 (只反转前缀部分)
-    // 注意：ip6.arpa 域名通常只包含网络前缀部分。
-    const arpaPrefix = networkPrefix;
+    const networkPrefix = fullHex.substring(0, hexCharsInPrefix); // 截取固定的网络前缀部分
+    const randomHostId = randomHex(hexCharsInRandom); // 生成主机 ID 的随机部分
+    const randomFullHex = networkPrefix + randomHostId; // 组合完整的 32 位随机 IPv6 地址 (十六进制)
+    const arpaPrefix = networkPrefix; // 计算反向域名 (只反转前缀部分)
     const reversed = arpaPrefix.split('').reverse().join('.');
-  
     return reversed + '.ip6.arpa';
   }
   
