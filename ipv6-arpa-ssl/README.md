@@ -50,7 +50,7 @@ curl -X POST 'https://[YOUR_WORKER_URL]/api/add-ssl' \
 ## POST 方式 - 添加 NS 记录
 
 ```bash
-curl -X POST '[Worker URL]/api/add-dns' \
+curl -X POST 'https://[YOUR_WORKER_URL]/api/add-dns' \
 -H 'Content-Type: application/json' \
 --data '{
     "zoneId": "5f7409c0dxxxxxxc256c84e57246a593",
