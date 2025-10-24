@@ -570,7 +570,27 @@ function getHTML() {
         localStorage.setItem('main-zone-id', document.getElementById('zone-id').value.trim());
         localStorage.setItem('main-api-key', document.getElementById('api-key').value.trim());
         localStorage.setItem('main-ipv6-cidr', document.getElementById('ipv6-cidr').value.trim());
-        localStorage.setItem('main-root-arpa-domain', rootDomain); 
+        localStorage.setItem('main-root-domain', rootDomain); 
+    }
+
+    // 加载主域名配置
+    function loadMainFormFields() {
+        const fieldsToLoad = [
+            { source: 'main-email', target: 'email' },
+            { source: 'main-zone-id', target: 'zone-id' },
+            { source: 'main-api-key', target: 'api-key' },
+            { source: 'main-ipv6-cidr', target: 'ipv6-cidr' },
+        ];
+
+        fieldsToLoad.forEach(f => {
+            const savedValue = localStorage.getItem(f.source);
+            const element = document.getElementById(f.target);
+            if (savedValue && element) {
+                element.value = savedValue;
+            }
+        });
+        // 返回根域名，以便在输出框中显示
+        return localStorage.getItem('main-root-domain');
     }
    
     // 辅助函数：从子域名中提取相对于主域名的前缀
@@ -619,7 +639,9 @@ function getHTML() {
             
             try {
                 const rootDomain = generateArpaRootDomain(cidr);
-                saveMainFormField('main-root-domain', rootDomain); // 存储主域名到main配置
+                saveMainFormField(rootDomain); // 存储主域名到main配置
+                saveFormField('root-domain', rootDomain);
+                
                 const generatedDomains = generateRandomPrefixDomains(rootDomain);
                 const resultText = generatedDomains.join('\\n');
                 domainOutput.value = resultText;
@@ -783,7 +805,7 @@ function getHTML() {
             }
         });
         
-        // 事件监听: 加载历史配置
+        // 事件监听: 加载主域名配置
         document.getElementById('history-btn').addEventListener('click', function() {
             resetErrors();
             const submitBtn = document.getElementById('history-btn');
@@ -796,11 +818,11 @@ function getHTML() {
 
             // 模拟加载过程（因为它只是从本地存储读取）
             setTimeout(() => {
-                loadFormFields(); // 调用已有的加载函数
-                showResult('已加载最近一次保存的配置。', 'success');
+                loadMainFormFields();
+                showResult('已加载主域名配置。', 'success');
                 // 恢复按钮状态
                 spinner.style.display = 'none';
-                document.getElementById('history-text').innerHTML = '<i class="fas fa-history"></i>&nbsp;获取最近一次历史配置';
+                document.getElementById('history-text').innerHTML = '<i class="fas fa-history"></i>&nbsp;获取主域名配置';
                 submitBtn.disabled = false;
             }, 300); // 增加一个短延迟，让用户看到加载状态
         });
