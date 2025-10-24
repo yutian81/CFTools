@@ -28,7 +28,12 @@ curl -X POST 'https://[YOUR_WORKER_URL]/api/add-ssl' \
 -H 'Content-Type: application/json' \
 -d '{
     "email": "your-cloudflare-email@example.com",
-    "zone_id": "your-cloudflare-zone-id",
-    "api_key": "your-cloudflare-global-api-key"
+    "zoneId": "your-cloudflare-zone-id",
+    "apikey": "your-cloudflare-global-api-key",
+    "ca": "ssl_com",
+    "enabled": true
 }'
 ```
+
+- ca 指证书颁发机构，支持四个：`ssl_com、lets_encrypt、google、sectigo`，默认 `ssl_com`
+- enabled 指是否启用新的证书颁发机构，默认 `true`
