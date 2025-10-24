@@ -496,39 +496,7 @@ function getHTML() {
     // ==========================================================
     // DOM 交互逻辑
     // ==========================================================
-  
-    const STORAGE_FIELDS = [
-      'ipv6-cidr', 'email', 'zone-id', 'api-key', 'sub-domain', 'dns-targets' 
-    ];
-    
-    // 辅助函数：保存表单字段到本地存储
-    function saveFormField(id, value) {
-        localStorage.setItem(id, value);
-    }
-    
-    // 从本地存储加载表单字段
-    function loadFormFields() {
-        STORAGE_FIELDS.forEach(id => {
-            const savedValue = localStorage.getItem(id);
-            const element = document.getElementById(id);
-            if (savedValue && element) {
-                element.value = savedValue;
-            }
-        });
-    }
-  
-    // 辅助函数：为所有目标字段添加输入事件监听器，实现实时保存
-    function initializeStorageListeners() {
-        STORAGE_FIELDS.forEach(id => {
-            const element = document.getElementById(id);
-            if (element) {
-                element.addEventListener('input', function (e) {
-                    saveFormField(id, e.target.value.trim());
-                });
-            }
-        });
-    }
-  
+
     // 辅助函数：显示字段错误
     function showError(fieldId, message) {
         const field = document.getElementById(fieldId);
@@ -564,23 +532,39 @@ function getHTML() {
         resultElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   
-    // 辅助函数：执行复制操作 (仅使用 Clipboard API)
-    async function copyTextToClipboard(text) {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            try {
-                await navigator.clipboard.writeText(text);
-                return true;
-            } catch (err) {
-                console.warn('Clipboard API 复制失败或权限被拒绝:', err);
-                return false;
-            }
-        } else {
-            console.warn('浏览器不支持 navigator.clipboard API。');
-            return false;
-        }
+    const STORAGE_FIELDS = [
+      'ipv6-cidr', 'email', 'zone-id', 'api-key', 'generated-domains', 'sub-domain', 'dns-targets' 
+    ];
+    
+    // 辅助函数：保存实时表单字段到本地
+    function saveFormField(id, value) {
+        localStorage.setItem(id, value);
     }
     
-    // 关键辅助函数：从子域名中提取相对于主区域的前缀
+    // 从本地加载实时表单字段
+    function loadFormFields() {
+        STORAGE_FIELDS.forEach(id => {
+            const savedValue = localStorage.getItem(id);
+            const element = document.getElementById(id);
+            if (savedValue && element) {
+                element.value = savedValue;
+            }
+        });
+    }
+  
+    // 辅助函数：为所有目标字段添加输入事件监听器，实现实时保存
+    function initializeStorageListeners() {
+        STORAGE_FIELDS.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('input', function (e) {
+                    saveFormField(id, e.target.value.trim());
+                });
+            }
+        });
+    }
+   
+    // 辅助函数：从子域名中提取相对于主域名的前缀
     function extractSubdomainPrefix(fullSubdomain, cidr) {
         try {
             const rootDomain = generateArpaRootDomain(cidr);
@@ -590,7 +574,6 @@ function getHTML() {
                 return '@'; // 根域名本身用 @ 表示
             }
             if (fullSubdomain.endsWith('.' + rootDomain)) {
-                // 截取掉主域名和它前面的点
                 const prefix = fullSubdomain.substring(0, fullSubdomain.length - rootDomain.length - 1);
                 return prefix;
             }
@@ -607,7 +590,7 @@ function getHTML() {
     // 页面初始化和事件监听
     // ==========================================================
     document.addEventListener('DOMContentLoaded', function () {
-        // loadFormFields();
+        loadFormFields(); // 加载最近一次本地数据
         initializeStorageListeners();
         
         const emailInput = document.getElementById('email');
@@ -618,34 +601,22 @@ function getHTML() {
         document.getElementById('generate-btn').addEventListener('click', async function () {
             resetErrors();
             const cidrInput = document.getElementById('ipv6-cidr');
-            const domainOutput = document.getElementById('generated-domain');
             const cidr = cidrInput.value.trim();
+            if (!cidr) { showError('ipv6-cidr', '请输入 IPv6 CIDR 地址。'); return; }
+            saveFormField('ipv6-cidr', cidr); // 存储cidr
+            
+            const domainOutput = document.getElementById('generated-domain');
             domainOutput.value = '';
             
-            // 存储 CIDR
-            saveFormField('ipv6-cidr', cidr);
-  
-            if (!cidr) {
-                showError('ipv6-cidr', '请输入 IPv6 CIDR 地址。');
-                return;
-            }
-  
             try {
                 const rootDomain = generateArpaRootDomain(cidr);
-                // 确保主域名也被保存，以便 NS 解析时使用
-                localStorage.setItem('root-arpa-domain', rootDomain); 
-                
+                saveMainFormField('main-root-domain', rootDomain); // 存储主域名到main配置
                 const generatedDomains = generateRandomPrefixDomains(rootDomain);
                 const resultText = generatedDomains.join('\\n');
                 domainOutput.value = resultText;
-                const copySuccess = await copyTextToClipboard(resultText);
+                saveFormField('generated-domains', domainOutput.value); // 存储所有生成的域名
   
                 let resultMessage = 'IP6.ARPA 域名生成成功！共生成 4 个域名。';
-                if (copySuccess) {
-                    resultMessage += '所有域名已自动复制到剪贴板。';
-                } else {
-                    resultMessage += '自动复制失败，请手动复制文本框中的内容。';
-                }
                 showResult(resultMessage, 'success');
                 console.log("生成的 4 个域名:\\n" + resultText);
             } catch (error) {
