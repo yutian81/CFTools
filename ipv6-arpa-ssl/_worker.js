@@ -598,25 +598,30 @@ function getHTML() {
     }
    
     // 辅助函数：从子域名中提取相对于主域名的前缀
-    function extractSubdomainPrefix(fullSubdomain, cidr) {
-        try {
-            const rootDomain = generateArpaRootDomain(cidr);
-            
-            // 检查子域名是否以主域名结尾
-            if (fullSubdomain === rootDomain) {
-                return '@'; // 根域名本身用 @ 表示
+    function extractSubdomainPrefix(fullSubdomain, fallbackCidr) {
+        let rootDomain = localStorage.getItem('main-root-domain');
+        let domainSource = "主配置";
+        
+        if (!rootDomain && fallbackCidr) {
+            try {
+                rootDomain = generateArpaRootDomain(fallbackCidr);
+                domainSource = "CIDR计算";
+            } catch (e) {
+                throw new Error('无法从 CIDR 计算根域名，请检查 CIDR 格式。');
             }
-            if (fullSubdomain.endsWith('.' + rootDomain)) {
-                const prefix = fullSubdomain.substring(0, fullSubdomain.length - rootDomain.length - 1);
-                return prefix;
-            }
-            // 如果不是基于当前 CIDR 的子域名，则无法正确解析
-            throw new Error('子域名格式不匹配当前 CIDR 的主域名');
-            
-        } catch (e) {
-            console.error('Prefix extraction failed:', e);
-            throw new Error('无法自动解析子域前缀，请检查完整子域名和 CIDR 是否匹配。');
+        } else if (!rootDomain) {
+            throw new Error('无法解析子域前缀：本地缺少已保存的主域名，且未提供有效的 CIDR 进行计算。');
         }
+
+        // 检查子域名是否以主域名结尾
+        if (fullSubdomain === rootDomain) {
+            return '@'; // 根域名本身用 @ 表示
+        }
+        if (fullSubdomain.endsWith('.' + rootDomain)) {
+            const prefix = fullSubdomain.substring(0, fullSubdomain.length - rootDomain.length - 1);
+            return prefix;
+        }
+        throw new Error(`子域名 (${fullSubdomain}) 与 ${domainSource} 确定的根域名 (${rootDomain}) 不匹配。`);
     }
   
     // ==========================================================
@@ -738,20 +743,18 @@ function getHTML() {
             if (!apikey) { showError('api-key', '请输入API密钥'); isValid = false; }
             
             // 验证 NS 委托信息
-            if (!cidr) { showError('ipv6-cidr', '请先输入 IPv6 CIDR 地址'); isValid = false; }
             if (!fullSubdomain) { showError('sub-domain', '请输入完整的域名'); isValid = false; }
-            if (nsTargets.length < 2) { 
-                showError('dns-targets', '请输入至少2个NS名称服务器，每行1个'); 
-                isValid = false; 
-            }
+            if (nsTargets.length < 2) { showError('dns-targets', '请输入至少2个NS名称服务器，每行1个'); isValid = false; }
+            // 检查主域名：如果本地存储和 CIDR 都没有，则停止
+            if (!localStorage.getItem('main-root-domain') && !cidr) { showError('ipv6-cidr', '请先生成域名，或填写 CIDR'); isValid = false; }
             if (!isValid) return;
             
             let recordName = '';
             try {
-                // 自动提取 recordName
+                // 自动提取 recordName，优先使用主配置的根域名，否则回退到 CIDR 计算
                 recordName = extractSubdomainPrefix(fullSubdomain, cidr);
                 if (!recordName) {
-                     showError('sub-domain', '无法解析子域前缀，请检查输入或 CIDR');
+                     showError('sub-domain', '无法解析子域前缀，请检查输入是否正确');
                      return;
                 }
             } catch (error) {
@@ -784,9 +787,9 @@ function getHTML() {
                 if (data.success) {
                     let successMsg = \`成功添加 \${data.added.length} 条 NS 记录。子域前缀: \${recordName}\`;
                     if (data.failed && data.failed.length > 0) {
-                        successMsg += \` 但有 \${data.failed.length} 条记录添加失败。\`;
+                        successMsg += \` 有 \${data.failed.length} 条记录添加失败。\`;
                     }
-                    saveMainAuthFields(email, zoneId, apikey); // 保存主域名配置
+                    saveMainAuthFields(email, zoneId, apikey); // 保存授权信息主域名配置
                     showResult(successMsg, 'success');
                 } else {
                     let errorMsg = 'NS记录添加失败';
