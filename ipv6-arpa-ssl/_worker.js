@@ -408,7 +408,7 @@ function getHTML() {
             <div class="form-group third-width">
                 <button type="button" class="btn" id="history-btn">
                     <div class="spinner" id="history-spinner"></div> 
-                    <span id="history-text"><i class="fas fa-history"></i>&nbsp;获取最近一次历史配置</span>
+                    <span id="history-text"><i class="fas fa-history"></i>&nbsp;获取主域名配置</span>
                 </button>
             </div>
         </div>
