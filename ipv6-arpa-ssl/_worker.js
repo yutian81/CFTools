@@ -30,14 +30,14 @@ async function handleApiRequest(request, queryParams) {
           email = body.email;
           zone_id = body.zone_id;
           api_key = body.api_key;
-          enabled = true; 
+          enabled = true;
           certificate_authority = "ssl_com"; 
       } else if (request.method === 'GET') {
           // GET 请求：从 URL 查询参数中获取
           email = queryParams.get('email');
           zone_id = queryParams.get('zoneId');
           api_key = queryParams.get('apikey');
-          enabled = queryParams.get('enabled') === 'true';
+          enabled = !(queryParams.get('enabled') === 'false');
           certificate_authority = queryParams.get('ca');
       }
 
