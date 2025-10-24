@@ -614,7 +614,7 @@ function getHTML() {
         const zoneIdInput = document.getElementById('zone-id');
         const apikeyInput = document.getElementById('api-key');
         
-        // 1. 事件监听: IPv6 域名生成 (保持不变)
+        // 事件监听: IPv6 域名生成
         document.getElementById('generate-btn').addEventListener('click', async function () {
             resetErrors();
             const cidrInput = document.getElementById('ipv6-cidr');
@@ -654,7 +654,7 @@ function getHTML() {
             }
         });
   
-        // 2. 事件监听: Cloudflare SSL 提交 (保持不变，使用统一的身份信息)
+        // 事件监听: Cloudflare SSL 提交
         document.getElementById('ssl-btn').addEventListener('click', async function (e) {
             e.preventDefault();
             
@@ -708,19 +708,18 @@ function getHTML() {
             }
         });
   
-        // 3. 事件监听: NS 解析提交 (核心修改部分)
+        // 事件监听: NS 解析提交
         document.getElementById('dns-btn').addEventListener('click', async function (e) {
             e.preventDefault();
             
-            // 统一的身份信息
+            // 身份信息和域名信息
             const email = emailInput.value.trim();
             const zoneId = zoneIdInput.value.trim();
-            const apikey = apikeyInput.value.trim();
-            
+            const apikey = apikeyInput.value.trim();          
+            const cidr = document.getElementById('ipv6-cidr').value.trim();
             const fullSubdomain = document.getElementById('sub-domain').value.trim();
             const targetsText = document.getElementById('dns-targets').value.trim();
-            const submitBtn = document.getElementById('dns-btn');
-            
+            const submitBtn = document.getElementById('dns-btn');          
             const nsTargets = targetsText.split('\\n')
                                          .map(line => line.trim())
                                          .filter(line => line.length > 0);
@@ -734,13 +733,12 @@ function getHTML() {
             if (!apikey) { showError('api-key', '请输入API密钥'); isValid = false; }
             
             // 验证 NS 委托信息
-            if (!fullSubdomain) { showError('sub-domain', '请输入完整的子域名'); isValid = false; }
+            if (!cidr) { showError('ipv6-cidr', '请先输入 IPv6 CIDR 地址'); isValid = false; }
+            if (!fullSubdomain) { showError('sub-domain', '请输入完整的域名'); isValid = false; }
             if (nsTargets.length < 2) { 
                 showError('dns-targets', '请输入至少2个NS名称服务器，每行1个'); 
                 isValid = false; 
             }
-            if (!cidr) { showError('ipv6-cidr', '请先输入 IPv6 CIDR 地址'); isValid = false; }
-            
             if (!isValid) return;
             
             let recordName = '';
