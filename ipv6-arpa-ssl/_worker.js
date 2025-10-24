@@ -607,7 +607,7 @@ function getHTML() {
     // 页面初始化和事件监听
     // ==========================================================
     document.addEventListener('DOMContentLoaded', function () {
-        loadFormFields();
+        // loadFormFields();
         initializeStorageListeners();
         
         const emailInput = document.getElementById('email');
