@@ -28,17 +28,17 @@ async function handleApiRequest(request, queryParams) {
           // POST 请求：从请求体中解析 JSON
           const body = await request.json();
           email = body.email;
-          zone_id = body.zone_id;
-          api_key = body.api_key;
-          enabled = true;
-          certificate_authority = "ssl_com"; 
+          zone_id = body.zoneId;
+          api_key = body.apikey;
+          enabled = body.enabled !== undefined ? body.enabled : true;
+          certificate_authority = body.ca || "ssl_com"; 
       } else if (request.method === 'GET') {
           // GET 请求：从 URL 查询参数中获取
           email = queryParams.get('email');
           zone_id = queryParams.get('zoneId');
           api_key = queryParams.get('apikey');
           enabled = !(queryParams.get('enabled') === 'false');
-          certificate_authority = queryParams.get('ca');
+          certificate_authority = queryParams.get('ca') || "ssl_com";
       }
 
       // 验证必需的输入
@@ -91,6 +91,7 @@ async function handleApiRequest(request, queryParams) {
           headers: {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Methods': 'GET, POST',
           }
       });
   }
@@ -650,7 +651,7 @@ function getHTML() {
       // 获取输入值
       const email = document.getElementById('email').value.trim();
       const zoneId = document.getElementById('zone-id').value.trim();
-      const apiKey = document.getElementById('api-key').value.trim();
+      const apikey = document.getElementById('api-key').value.trim();
       const caSelect = document.getElementById('ca-select').value;
   
       // 重置错误状态
@@ -666,7 +667,7 @@ function getHTML() {
         showError('zone-id', '请输入区域ID');
         isValid = false;
       }
-      if (!apiKey) {
+      if (!apikey) {
         showError('api-key', '请输入API密钥');
         isValid = false;
       }
@@ -686,10 +687,10 @@ function getHTML() {
           },
           body: JSON.stringify({
             email: email,
-            zone_id: zoneId,
-            api_key: apiKey,
+            zoneId: zoneId,
+            apikey: apikey,
             enabled: true,
-            certificate_authority: caSelect,
+            ca: caSelect,
           }),
         });
   
