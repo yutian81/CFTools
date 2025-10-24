@@ -104,6 +104,7 @@ function getHTML() {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IP6.ARPA域名自动添加SSL证书</title>
+  <meta name="description" content="一键为您的 IP6.ARPA 反向解析域名自动申请和配置 Cloudflare 通用 SSL 证书，同时提供 IP6.ARPA 域名生成工具。">
   <link rel="icon" href="https://tunnelbroker.net/favicon.ico" type="image/ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
@@ -131,7 +132,7 @@ function getHTML() {
         border-radius: 12px;
         box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
         width: 100%;
-        max-width: 960px;
+        max-width: 840px;
         padding: 30px;
         margin: 30px;
     }
@@ -324,10 +325,10 @@ function getHTML() {
         border-radius: 8px;
     }
     
-    .info-box h3 {
+    .info-box h2 {
         color: #2c3e50;
         margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 20px;
     }
     
     .info-box p {
@@ -337,16 +338,30 @@ function getHTML() {
     }
 
     .footer {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 12px;
-        color: #7f8c8d;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer a:hover {
+     color: #3498db;
+    }
+    .separator {
+      padding: 0 5px; 
+      color: inherit; 
+      display: inline-block;
     }
 
     /* 响应式调整：在小屏幕上变回单列布局 */
     @media (max-width: 600px) {
       .form-row { flex-direction: column; gap: 0; }
       .form-group.half-width { margin-bottom: 20px; }
+      .footer { font-size: 0.8em; }
     }  
   </style>
 </head>
@@ -402,7 +417,7 @@ function getHTML() {
     <div class="result" id="result-message"></div>
 
     <div class="info-box">
-      <h3>IP6.ARPA 域名生成工具</h3>
+      <h2>IP6.ARPA 域名生成工具</h2>
       <div class="form-row" style="margin-top: 15px;">
         <div class="form-group half-width">
           <label for="ipv6-cidr">输入 IPv6 CIDR 地址</label>
@@ -418,13 +433,15 @@ function getHTML() {
     </div>    
 
     <div class="info-box">
-      <h3>API GET 调用示例</h3>
+      <h2>API GET 调用示例</h2>
       <p style="font-size: 14px; margin-bottom: 10px;">证书颁发机构 (ca) 支持：<code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：ip6.arpa 域名通常仅支持 <code>ssl_com</code>。</strong></p>
       <pre style="background: rgba(255, 255, 255, 0.7); padding: 10px; border-radius: 6px; font-size: 14px; overflow-x: auto; color: #000;">https://worker地址/?zoneId=...&email=...&apikey=...&enabled=true&ca=ssl_com</pre>
     </div>
 
     <div class="footer">
-      <p>注意：您的API密钥仅用于本次请求，不会被存储</p>
+      <i class="fas fa-copyright"></i> Copyright 2025 <span class="separator">|</span>
+      <a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl" target="_blank"><i class="fab fa-github"></i> GitHub</a> <span class="separator">|</span>
+      <a href="https://blog.811520.xyz/" target="_blank"><i class="fas fa-blog"></i> QingYun Blog</a>
     </div>
   </div>
 
