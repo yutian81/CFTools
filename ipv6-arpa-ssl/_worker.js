@@ -431,28 +431,8 @@ function getHTML() {
   
 <script>
     // ==========================================================
-    // 域名生成逻辑 (保持不变)
+    // 域名生成逻辑
     // ==========================================================
-  
-    // 辅助函数：将缩写的 IPv6 地址展开为完整的 32 位十六进制字符串
-    function expandIpv6(ipv6) {
-        ipv6 = ipv6.toLowerCase();
-        if (!ipv6.includes('::')) {
-            return ipv6.split(':').map((block) => block.padStart(4, '0')).join('');
-        }
-        const parts = ipv6.split('::');
-        const leftBlocks = parts[0].split(':').filter(Boolean);
-        const rightBlocks = parts[1].split(':').filter(Boolean);
-        const existingBlocksCount = leftBlocks.length + rightBlocks.length;
-        const zeroBlocksCount = 8 - existingBlocksCount;
-        if (zeroBlocksCount < 0) {
-            throw new Error('IPv6 地址块过多，格式错误。');
-        }
-        const zeroPadding = Array(zeroBlocksCount).fill('0000').join('');
-        const fullLeft = leftBlocks.map((block) => block.padStart(4, '0')).join('');
-        const fullRight = rightBlocks.map((block) => block.padStart(4, '0')).join('');
-        return fullLeft + zeroPadding + fullRight;
-    }
   
     // 辅助函数：生成指定长度的随机十六进制字符串
     function randomHex(length) {
@@ -463,30 +443,44 @@ function getHTML() {
         }
         return result;
     }
-  
+
     // 生成 ipv6 反向根域名
     function generateArpaRootDomain(cidr) {
         const parts = cidr.split('/');
         if (parts.length !== 2) {
             throw new Error('CIDR 格式不正确，请使用 IP/前缀长度 格式。');
         }
-        const ipv6 = parts[0].trim();
+        
+        let ipv6 = parts[0].trim().toLowerCase();
         const prefixLength = parseInt(parts[1], 10);
-        if (isNaN(prefixLength) || prefixLength < 0 || prefixLength > 128 || prefixLength % 4 !== 0) {
+        if (isNaN(prefixLength) || prefixLength % 4 !== 0 || prefixLength < 4) {
             throw new Error('前缀长度无效，必须是 4 的倍数 (例如: /32, /48, /64)。');
         }
-        const fullHex = expandIpv6(ipv6);
+
+        let ipBlocks = ipv6.split(':');
+        const requiredBlocks = prefixLength / 16;
+        let prefixBlocks = [];
+        for (let block of ipBlocks) {
+            if (block.length === 0) { break; } // 遇到 '::'，停止，后续视为零块
+            prefixBlocks.push(block);
+            if (prefixBlocks.length === requiredBlocks) break;
+        }
+
+        while (prefixBlocks.length < requiredBlocks) {
+            prefixBlocks.push('0');
+        }
+        let fullHex = prefixBlocks.map((block) => block.padStart(4, '0')).join('');
         const hexCharsInPrefix = prefixLength / 4;
-        const networkPrefix = fullHex.substring(0, hexCharsInPrefix);
-        const reversed = networkPrefix.split('').reverse().join('.');
+        fullHex = fullHex.substring(0, hexCharsInPrefix);
+        const reversed = fullHex.split('').reverse().join('.'); // 反转并用点分隔
         return reversed + '.ip6.arpa';
     }
   
-    // 生成随机前缀域名
+    // 生成3个随机前缀子域名
     function generateRandomPrefixDomains(baseArpaDomain) {
         const domains = [baseArpaDomain];
         for (let i = 0; i < 3; i++) {
-            const randomLength = Math.floor(Math.random() * 4) + 1;
+            const randomLength = Math.floor(Math.random() * 4) + 1; // 1到4个字符
             const prefix = randomHex(randomLength).split('').join('.');
             domains.push(prefix + '.' + baseArpaDomain); 
         }
@@ -540,19 +534,8 @@ function getHTML() {
     function saveFormField(id, value) {
         localStorage.setItem(id, value);
     }
-    
-    // 从本地加载实时表单字段
-    function loadFormFields() {
-        STORAGE_FIELDS.forEach(id => {
-            const savedValue = localStorage.getItem(id);
-            const element = document.getElementById(id);
-            if (savedValue && element) {
-                element.value = savedValue;
-            }
-        });
-    }
-  
-    // 辅助函数：为所有目标字段添加输入事件监听器，实现实时保存
+     
+    // 辅助函数：为所有输入框添加事件监听器，实现实时保存
     function initializeStorageListeners() {
         STORAGE_FIELDS.forEach(id => {
             const element = document.getElementById(id);
@@ -564,20 +547,31 @@ function getHTML() {
         });
     }
 
-    // 保存主域名配置 1/2: 保存 CIDR 和根域名 (在生成按钮点击后)
+    // 辅助函数：从本地加载实时表单字段
+    function loadFormFields() {
+        STORAGE_FIELDS.forEach(id => {
+            const savedValue = localStorage.getItem(id);
+            const element = document.getElementById(id);
+            if (savedValue && element) {
+                element.value = savedValue;
+            }
+        });
+    }
+
+    // 辅助函数：保存主域名配置 1/2: 保存 CIDR 和根域名 (在生成按钮点击后)
     function saveMainCidrAndDomain(cidr, rootDomain) {
         localStorage.setItem('main-ipv6-cidr', cidr);
         localStorage.setItem('main-root-domain', rootDomain); 
     }
 
-    // 保存主域名配置 2/2: 仅保存授权信息 (在 NS 记录成功后追加)
+    // 辅助函数：保存主域名配置 2/2: 保存授权信息 (在 NS 记录成功后追加)
     function saveMainAuthFields(email, zoneId, apiKey) {
         localStorage.setItem('main-email', email);
         localStorage.setItem('main-zone-id', zoneId);
         localStorage.setItem('main-api-key', apiKey);
     }
 
-    // 加载主域名配置
+    // 辅助函数：加载主域名配置
     function loadMainFormFields() {
         const fieldsToLoad = [
             { source: 'main-email', target: 'email' },
@@ -627,6 +621,7 @@ function getHTML() {
     // ==========================================================
     // 页面初始化和事件监听
     // ==========================================================
+
     document.addEventListener('DOMContentLoaded', function () {
         loadFormFields(); // 加载最近一次本地数据
         initializeStorageListeners();
@@ -641,7 +636,6 @@ function getHTML() {
             const cidrInput = document.getElementById('ipv6-cidr');
             const cidr = cidrInput.value.trim();
             if (!cidr) { showError('ipv6-cidr', '请输入 IPv6 CIDR 地址。'); return; }
-            saveFormField('ipv6-cidr', cidr); // 存储cidr
             
             const domainOutput = document.getElementById('generated-domain');
             domainOutput.value = '';
@@ -649,7 +643,6 @@ function getHTML() {
             try {
                 const rootDomain = generateArpaRootDomain(cidr);
                 saveMainCidrAndDomain(cidr, rootDomain);
-                
                 const generatedDomains = generateRandomPrefixDomains(rootDomain);
                 const resultText = generatedDomains.join('\\n');
                 domainOutput.value = resultText;
