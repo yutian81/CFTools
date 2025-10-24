@@ -563,6 +563,15 @@ function getHTML() {
             }
         });
     }
+
+    // 保存主域名配置
+    function saveMainFormField(rootDomain) {
+        localStorage.setItem('main-email', document.getElementById('email').value.trim());
+        localStorage.setItem('main-zone-id', document.getElementById('zone-id').value.trim());
+        localStorage.setItem('main-api-key', document.getElementById('api-key').value.trim());
+        localStorage.setItem('main-ipv6-cidr', document.getElementById('ipv6-cidr').value.trim());
+        localStorage.setItem('main-root-arpa-domain', rootDomain); 
+    }
    
     // 辅助函数：从子域名中提取相对于主域名的前缀
     function extractSubdomainPrefix(fullSubdomain, cidr) {
