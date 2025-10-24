@@ -392,19 +392,19 @@ function getHTML() {
 
         <div class="btn-group">
             <div class="form-group third-width">
-                <button type="submit" class="btn" id="ssl-btn">
-                    <div class="spinner" id="ssl-spinner"></div>
-                    <span id="ssl-text"><i class="fas fa-plus-circle"></i> 添加 SSL 证书</span>
-                </button>
-            </div>
-
-            <div class="form-group third-width">
                 <button type="submit" class="btn" id="dns-btn">
                     <div class="spinner" id="dns-spinner"></div> 
                     <span id="dns-text"><i class="fas fa-plus-circle"></i>&nbsp;添加子域 NS 记录</span>
                 </button>
             </div>
-            
+ 
+            <div class="form-group third-width">
+                <button type="submit" class="btn" id="ssl-btn">
+                    <div class="spinner" id="ssl-spinner"></div>
+                    <span id="ssl-text"><i class="fas fa-plus-circle"></i>&nbsp;添加 SSL 证书</span>
+                </button>
+            </div>
+
             <div class="form-group third-width">
                 <button type="button" class="btn" id="history-btn">
                     <div class="spinner" id="history-spinner"></div> 
