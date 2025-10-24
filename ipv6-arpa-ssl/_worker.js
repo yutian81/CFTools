@@ -378,9 +378,9 @@ function getHTML() {
 
         <div class="form-row">
             <div class="form-group half-width">
-                <label for="sub-domain"><i class="fas fa-layer-group"></i> 完整子域名 (从上方结果复制)</label>
+                <label for="sub-domain"><i class="fas fa-layer-group"></i> 完整域名 (从上方结果复制)</label>
                 <input type="text" id="sub-domain" placeholder="例如: 0.8.d.2.e.2.9.1.8.3.2.b.2.ip6.arpa">
-                <div class="error-message" id="sub-domain-error">请输入完整的子域名</div>
+                <div class="error-message" id="sub-domain-error">请输入完整的域名</div>
             </div>
             
             <div class="form-group half-width">
@@ -719,7 +719,6 @@ function getHTML() {
             
             const fullSubdomain = document.getElementById('sub-domain').value.trim();
             const targetsText = document.getElementById('dns-targets').value.trim();
-            const cidr = document.getElementById('ipv6-cidr').value.trim(); // 用于提取主域名
             const submitBtn = document.getElementById('dns-btn');
             
             const nsTargets = targetsText.split('\\n')
