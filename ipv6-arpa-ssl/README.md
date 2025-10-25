@@ -57,7 +57,7 @@ curl -X POST 'https://[YOUR_WORKER_URL]/api/add-dns' \
     "zoneId": "5f7409c0dxxxxxxc256c84e57246a593",
     "email": "user@example.com",
     "apikey": "4cc858f6268b4d82d9123f19f47aeafxxxxxx",
-    "recordName": "7.7.c.3.3.c.7.4.0.9.0.9.b",
+    "recordName": "7",
     "nsTargets": [
         "dale.ns.cloudflare.com",
         "desi.ns.cloudflare.com"
