@@ -615,7 +615,7 @@ function getHTML() {
             const prefix = fullSubdomain.substring(0, fullSubdomain.length - rootDomain.length - 1);
             return prefix;
         }
-        throw new Error(`子域名 (${fullSubdomain}) 与 ${domainSource} 确定的根域名 (${rootDomain}) 不匹配。`);
+        throw new Error(\`子域名 (\${fullSubdomain}) 与 \${domainSource} 确定的根域名 (\${rootDomain}) 不匹配。\`);
     }
   
     // ==========================================================
