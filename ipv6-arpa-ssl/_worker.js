@@ -293,7 +293,7 @@ function getHTML() {
           margin-top: 25px;
           border-radius: 8px;
       }
-      .info-box p, .domain-box p, #dns-form p { font-size: 14px; line-height: 1.5; color: #34495e; }
+      .info-box p, .domain-box p, #dns-form p { font-size: 12px; line-height: 1.5; color: #34495e; }
   
       .footer { text-align: center; margin-top: 20px; font-size: 14px; color: #444; }
       .footer a { color: inherit; text-decoration: none; transition: color 0.3s; }
