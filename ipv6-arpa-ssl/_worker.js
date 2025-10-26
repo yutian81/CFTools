@@ -335,8 +335,8 @@ function getHTML() {
             <textarea id="generated-domain" readonly rows="4" placeholder="生成结果将显示在这里"></textarea> 
           </div>
         </div>
-        <p style="margin: 10px 0 6px 0;">🚀 获取域名后，选择一个域名托管到 CF，并获取域名的 NS 名称服务器</p>
-        <p>🚀 将托管的域名复制到下方的<strong>“完整子域名”</strong>输入框，将对应的 NS 服务器复制到下方的<strong>“子域名 NS 名称服务器”</strong>输入框</p>
+        <p style="margin: 10px 0 6px 0;">🚀 获取域名后，选择一个域名托管到 CF，并获取该域名的 NS 名称服务器</p>
+        <p>🚀 将托管的域名复制到下方<strong>“完整域名”</strong>输入框，将对应的 NS 服务器复制到下方<strong>“子域名NS名称服务器”</strong>输入框</p>
       </div>
   
       <div class="result" id="result-message"></div>
@@ -384,7 +384,7 @@ function getHTML() {
             </div>
             
             <div class="form-group half-width">
-                <label for="dns-targets"><i class="fas fa-server"></i> 子域名 NS 名称服务器</label>
+                <label for="dns-targets"><i class="fas fa-server"></i> 子域名NS名称服务器</label>
                 <textarea id="dns-targets" rows="2" placeholder="输入至少2个NS服务器, 每行1个"></textarea>
                 <div class="error-message" id="dns-targets-error">输入至少2个NS服务器, 每行1个</div>
             </div>
@@ -418,14 +418,14 @@ function getHTML() {
         <h2>API GET 调用示例</h2>
         <p style="font-size: 16px; margin-bottom: 10px;"><i class="fas fa-database"></i> <strong>GET 请求 - 添加 SSL 证书</strong></p>
         <pre style="background: rgba(255, 255, 255, 0.3); padding: 10px; border-radius: 6px; font-size: 14px; overflow-x: auto; color: #000; box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);">https://[worker-url]/?zoneId=...&email=...&apikey=...&enabled=true&ca=ssl_com</pre>
-        <p style="margin: 10px 0 6px 0;">🚀 证书颁发机构 (ca) 支持：<code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：ip6.arpa 域名通常仅支持 <code>ssl_com</code>。</strong></p>
-        <p>🚀 POST 请求示例详见仓库 README.md 说明文件</p>
+        <p style="margin: 10px 0 6px 0;">🚀 证书颁发机构 (CA) 支持：<code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：</strong>ip6.arpa 域名通常仅支持 <code>ssl_com</code></p>
+        <p>🚀 <strong>POST 请求示例</strong>详见仓库<a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl/README.md" target="_blank"> README.md </a>说明文件</p>
       </div>
   
       <div class="footer">
         <i class="fas fa-copyright"></i> Copyright 2025 <span class="separator">|</span>
         <a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl" target="_blank"><i class="fab fa-github"></i> GitHub</a> <span class="separator">|</span>
-        <a href="https://blog.811520.xyz/" target="_blank"><i class="fas fa-blog"></i> QingYun Blog</a>
+        <a href="https://blog.notett.com/" target="_blank"><i class="fas fa-blog"></i> QingYun Blog</a>
       </div>
     </div>
   
