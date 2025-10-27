@@ -278,13 +278,13 @@ function getHTML() {
       .spinner { display: none; width: 20px; height: 20px; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite; margin-right: 10px; }
       @keyframes spin { to { transform: rotate(360deg); } }
       
-      .result { margin-top: 20px; padding: 15px; border-radius: 8px; display: none; text-align: center; font-weight: 600; }
+      .result { margin-top: 25px; padding: 15px; border-radius: 8px; display: none; text-align: center; font-weight: 600; }
       .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
       .error-result { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
       .error { border-color: #e74c3c !important; box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2) !important; }
       .error-message { color: #e74c3c; font-size: 14px; margin-top: 5px; display: none; }
       
-      .info-box, .domain-box, #dns-form, #ssl-form {
+      .info-box, .domain-box, #ssl-form {
           background: rgba(255, 255, 255, 0.35);
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
@@ -293,7 +293,7 @@ function getHTML() {
           margin-top: 25px;
           border-radius: 8px;
       }
-      .info-box p, .domain-box p, #dns-form p { font-size: 12px; line-height: 1.5; color: #34495e; }
+      .info-box p, .domain-box p, #ssl-form p { font-size: 12px; line-height: 2; color: #34495e; }
   
       .footer { text-align: center; margin-top: 20px; font-size: 14px; color: #444; }
       .footer a { color: inherit; text-decoration: none; transition: color 0.3s; }
@@ -335,7 +335,7 @@ function getHTML() {
             <textarea id="generated-domain" readonly rows="4" placeholder="生成结果将显示在这里"></textarea> 
           </div>
         </div>
-        <p style="margin: 10px 0 6px 0;">🚀 获取域名后，选择一个域名托管到 CF，并获取该域名的 NS 名称服务器</p>
+        <p style="margin-top: 10px;">🚀 获取域名后，选择一个域名托管到 CF，并获取该域名的 NS 名称服务器</p>
         <p>🚀 将托管的域名复制到下方<strong>“完整域名”</strong>输入框，将对应的 NS 服务器复制到下方<strong>“子域名NS名称服务器”</strong>输入框</p>
       </div>
   
@@ -408,18 +408,21 @@ function getHTML() {
             <div class="form-group third-width">
                 <button type="button" class="btn" id="history-btn">
                     <div class="spinner" id="history-spinner"></div> 
-                    <span id="history-text"><i class="fas fa-history"></i>&nbsp;获取主域名配置</span>
+                    <span id="history-text"><i class="fas fa-history"></i>&nbsp;加载主域名配置</span>
                 </button>
             </div>
         </div>
+        <p style="margin-top: 10px;">🚀 <strong>添加子域NS记录:</strong> 邮箱、ID、秘钥均需填写<strong>主域名参数</strong>，完整域名、子域名NS名称服务器则填写<strong>子域名参数</strong></p>
+        <p>🚀 <strong>添加SSL证书：</strong>需要为哪个域名申请证书，则<strong>所有输入框</strong>均填写哪个域名的参数；ip6.arpa域名的CA机构仅支持ssl.com</p>
+        <p>🚀 <strong>加载主域名配置：</strong>成功添加NS记录后，工具会将<strong>主域名参数</strong>存储到<strong>本地浏览器</strong>，点击即可快速加载；所有数据<strong>均在本地</strong></p>
       </form>
 
       <div class="info-box">
         <h2>API GET 调用示例</h2>
         <p style="font-size: 16px; margin-bottom: 10px;"><i class="fas fa-database"></i> <strong>GET 请求 - 添加 SSL 证书</strong></p>
-        <pre style="background: rgba(255, 255, 255, 0.3); padding: 10px; border-radius: 6px; font-size: 14px; overflow-x: auto; color: #000; box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);">https://[worker-url]/?zoneId=...&email=...&apikey=...&enabled=true&ca=ssl_com</pre>
-        <p style="margin: 10px 0 6px 0;">🚀 证书颁发机构 (CA) 支持：<code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：</strong>ip6.arpa 域名通常仅支持 <code>ssl_com</code></p>
-        <p>🚀 <strong>POST 请求示例</strong>详见仓库<a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl/README.md" target="_blank"> README.md </a>说明文件</p>
+        <pre style="background: rgba(255, 255, 255, 0.3); padding: 10px; border-radius: 6px; font-size: 14px; overflow-x: auto; color: #000; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);">https://[worker-url]/?zoneId=...&email=...&apikey=...&enabled=true&ca=ssl_com</pre>
+        <p style="margin-top: 10px;"">🚀 证书颁发机构 (CA) 支持：<code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：</strong>ip6.arpa 域名通常仅支持 <code>ssl_com</code></p>
+        <p>🚀 <strong>POST 请求示例：</strong>详见仓库<a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl/README.md" target="_blank"> README.md </a>说明文件</p>
       </div>
   
       <div class="footer">
