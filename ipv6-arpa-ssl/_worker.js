@@ -421,8 +421,8 @@ function getHTML() {
         <h2>API GET 调用示例</h2>
         <p style="font-size: 16px; margin-bottom: 10px;"><i class="fas fa-database"></i> <strong>GET 请求 - 添加 SSL 证书</strong></p>
         <pre style="background: rgba(255, 255, 255, 0.3); padding: 10px; border-radius: 6px; font-size: 14px; overflow-x: auto; color: #000; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);">https://[worker-url]/?zoneId=...&email=...&apikey=...&enabled=true&ca=ssl_com</pre>
-        <p style="margin-top: 10px;"">🚀 <strong>证书颁发机构 (CA)</strong>: 支持<code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：</strong>ip6.arpa 域名仅支持 <code>ssl_com</code></p>
-        <p>🚀 <strong>POST 请求示例：</strong>详见仓库<a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl/README.md" target="_blank"> README.md </a>说明文件</p>
+        <p style="margin-top: 10px;"">🚀 <strong>证书颁发机构 (CA)</strong>: 支持 <code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：</strong>ip6.arpa 域名仅支持 <code>ssl_com</code></p>
+        <p>🚀 <strong>POST 请求示例：</strong>详见仓库<a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl/README.md" target="_blank"> README.md </a>说明文件，支持“添加SSL证书”和“添加子域NS记录”</p>
       </div>
   
       <div class="footer">
