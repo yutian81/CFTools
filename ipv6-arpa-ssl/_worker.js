@@ -270,10 +270,11 @@ function getHTML() {
       .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
       .btn:active { transform: translateY(0); }   
       .btn-group { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px; justify-content: space-between; }
-      .btn#generate-btn { margin-top: 15px; }
+      .btn#generate-btn { margin-top: 24px; }
       .btn#generate-btn i, .btn#dns-btn i { position: relative; top: 1px; }
-      #generated-domain { height: 106px !important; min-height: 106px; max-height: 106px; padding-top: 10px; }
-      #dns-targets, #sub-domain { height: 65px !important; min-height: 65px; max-height: 65px; padding-top: 10px; }
+      
+      #generated-domain { height: 115px; min-height: 115px; max-height: 115px; padding-top: 10px; }
+      #dns-targets, #sub-domain { height: 65px; min-height: 65px; max-height: 65px; padding-top: 10px; }
   
       .spinner { display: none; width: 20px; height: 20px; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite; margin-right: 10px; }
       @keyframes spin { to { transform: rotate(360deg); } }
@@ -288,7 +289,7 @@ function getHTML() {
           background: rgba(255, 255, 255, 0.35);
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
-          border-left: 4px solid #3498db;
+          border-left: 5px solid #3498db;
           padding: 15px;
           margin-top: 25px;
           border-radius: 8px;
@@ -302,9 +303,11 @@ function getHTML() {
   
       /* 响应式调整：在小屏幕上变回单列布局 */
       @media (max-width: 600px) {
+        .domain-box h2, #ssl-form h2 { margin-bottom: -10px; }
         .form-row { flex-direction: column; gap: 0; }
-        .form-group.half-width, .form-group.third-width { margin-bottom: 15px; }
+        .form-group.half-width, .form-group.third-width { margin-top: 15px; }
         .footer { font-size: 0.8em; }
+        .btn#generate-btn { margin-top: 20px; }
         .btn-group { flex-direction: column; gap: 0; margin-top: 0; }
       }
     </style>
@@ -421,7 +424,7 @@ function getHTML() {
         <h2>API GET 调用示例</h2>
         <p style="font-size: 16px; margin-bottom: 10px;"><i class="fas fa-database"></i> <strong>GET 请求 - 添加 SSL 证书</strong></p>
         <pre style="background: rgba(255, 255, 255, 0.3); padding: 10px; border-radius: 6px; font-size: 14px; overflow-x: auto; color: #000; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);">https://[worker-url]/?zoneId=...&email=...&apikey=...&enabled=true&ca=ssl_com</pre>
-        <p style="margin-top: 10px;"">🚀 <strong>证书颁发机构 (CA)</strong>: 支持 <code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：</strong>ip6.arpa 域名仅支持 <code>ssl_com</code></p>
+        <p style="margin-top: 10px;">🚀 <strong>证书颁发机构 (CA)</strong>: 支持 <code>ssl_com</code>、<code>lets_encrypt</code>、<code>google</code>、<code>sectigo</code>。<strong>注意：</strong>ip6.arpa 域名仅支持 <code>ssl_com</code></p>
         <p>🚀 <strong>POST 请求示例：</strong>详见仓库<a href="https://github.com/yutian81/CFTools/tree/main/ipv6-arpa-ssl/README.md" target="_blank"> README.md </a>说明文件，支持“添加SSL证书”和“添加子域NS记录”</p>
       </div>
   
@@ -449,42 +452,62 @@ function getHTML() {
 
     // 生成 ipv6 反向根域名
     function generateArpaRootDomain(cidr) {
-        const parts = cidr.split('/');
-        if (parts.length !== 2) {
-            throw new Error('CIDR 格式不正确，请使用 IP/前缀长度 格式。');
+        const trimmedCidr = cidr.trim();
+        const ipv6CidrRegex = new RegExp('^((([0-9a-f]{1,4}:){7}[0-9a-f]{1,4})|(([0-9a-f]{1,4}:){1,7}:)|(([0-9a-f]{1,4}:){1,6}:[0-9a-f]{1,4})|(([0-9a-f]{1,4}:){1,5}(:[0-9a-f]{1,4}){1,2})|(([0-9a-f]{1,4}:){1,4}(:[0-9a-f]{1,4}){1,3})|(([0-9a-f]{1,4}:){1,3}(:[0-9a-f]{1,4}){1,4})|(([0-9a-f]{1,4}:){1,2}(:[0-9a-f]{1,4}){1,5})|([0-9a-f]{1,4}:(:[0-9a-f]{1,4}){1,6})|(::([0-9a-f]{1,4}){1,7}|::))/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8])$', 'i');
+        if (!ipv6CidrRegex.test(trimmedCidr)) {
+            throw new Error('IPv6 CIDR 格式不正确，请使用标准的 IPv6/前缀长度 格式。');
         }
         
+        const parts = trimmedCidr.split('/');
         let ipv6 = parts[0].trim().toLowerCase();
         const prefixLength = parseInt(parts[1], 10);
-        if (isNaN(prefixLength) || prefixLength % 4 !== 0 || prefixLength < 4) {
-            throw new Error('前缀长度无效，必须是 4 的倍数 (例如: /32, /48, /64)。');
+        if (prefixLength % 4 !== 0 || prefixLength < 4) {
+            throw new Error('前缀长度无效，必须是 4 的倍数 (例如: /32, /48, /64)，且大于等于 4。');
         }
 
+        let doubleColonFound = false;
         let ipBlocks = ipv6.split(':');
         const requiredBlocks = prefixLength / 16;
         let prefixBlocks = [];
         for (let block of ipBlocks) {
-            if (block.length === 0) { break; } // 遇到 '::'，停止，后续视为零块
-            prefixBlocks.push(block);
-            if (prefixBlocks.length === requiredBlocks) break;
+            if (block.length === 0) {
+                if (doubleColonFound) { break; } // 遇到第二个空块（非法），停止处理，由后续逻辑填充0块
+                doubleColonFound = true;
+            } else {
+                prefixBlocks.push(block);
+            }
         }
 
-        while (prefixBlocks.length < requiredBlocks) {
-            prefixBlocks.push('0');
+        const blocksToFill = requiredBlocks - prefixBlocks.length;
+        if (doubleColonFound && blocksToFill > 0) {
+            while (prefixBlocks.length < requiredBlocks) {
+                prefixBlocks.push('0');
+            }
         }
-        let fullHex = prefixBlocks.map((block) => block.padStart(4, '0')).join('');
+        
+        // 转换为完整的十六进制字符串并进行填充/截断
+        let currentHex = prefixBlocks.map((block) => block.padStart(4, '0')).join('');
         const hexCharsInPrefix = prefixLength / 4;
-        fullHex = fullHex.substring(0, hexCharsInPrefix);
-        const reversed = fullHex.split('').reverse().join('.'); // 反转并用点分隔
+        
+        // 确保最终的十六进制字符串长度与前缀要求一致
+        if (currentHex.length > hexCharsInPrefix) {
+             currentHex = currentHex.substring(0, hexCharsInPrefix);
+        } else if (currentHex.length < hexCharsInPrefix) {
+             currentHex = currentHex.padEnd(hexCharsInPrefix, '0');
+        }
+
+        // 反转ipv6地址并用 . 分隔
+        const reversed = currentHex.split('').reverse().join('.'); 
         return reversed + '.ip6.arpa';
     }
   
-    // 生成3个随机前缀子域名
+    // 生成主域名及带 1-4 个字符随机前缀的子域名
     function generateRandomPrefixDomains(baseArpaDomain) {
-        const domains = [baseArpaDomain];
-        for (let i = 0; i < 3; i++) {
-            const randomLength = Math.floor(Math.random() * 4) + 1; // 1到4个字符
-            const prefix = randomHex(randomLength).split('').join('.');
+        const domains = [];
+        domains.push(baseArpaDomain); 
+        for (let length = 1; length <= 4; length++) {
+            const randomPrefixHex = randomHex(length); 
+            const prefix = randomPrefixHex.split('').join('.');
             domains.push(prefix + '.' + baseArpaDomain); 
         }
         return domains;
@@ -651,9 +674,9 @@ function getHTML() {
                 domainOutput.value = resultText;
                 saveFormField('generated-domains', domainOutput.value); // 存储所有生成的域名
   
-                let resultMessage = '已成功生成 4 个 IP6.ARPA 域名，请复制保存';
+                let resultMessage = '已成功生成 5 个 IP6.ARPA 域名，请复制保存';
                 showResult(resultMessage, 'success');
-                console.log("生成的 4 个域名:\\n" + resultText);
+                console.log("生成的 5 个域名:\\n" + resultText);
             } catch (error) {
                 showError('ipv6-cidr', error.message || '生成域名失败, 请检查CIDR格式。');
                 showResult('生成失败: ' + (error.message || '未知错误'), 'error');
@@ -729,7 +752,6 @@ function getHTML() {
             const nsTargets = targetsText.split('\\n')
                                          .map(line => line.trim())
                                          .filter(line => line.length > 0);
-  
             resetErrors();
             
             // 验证身份信息
