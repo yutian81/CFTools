@@ -316,9 +316,9 @@ function getHTML() {
     <div class="container">
       <h1>IP6.ARPA域名自动添加SSL证书</h1>
       <div class="registration-buttons">
-        <a href="https://tb.netassist.ua" class="register-btn" target="_blank"><i class="fas fa-registered"></i> ip6.arpa 注册地址1</a>
-        <a href="https://dns.he.net" class="register-btn" target="_blank"><i class="fas fa-registered"></i> ip6.arpa 注册地址2</a>
-        <a href="https://tunnelbroker.net/" class="register-btn" target="_blank"><i class="fas fa-registered"></i> ip6.arpa 注册地址3</a>
+        <a href="https://tb.netassist.ua" class="register-btn" target="_blank"><i class="fas fa-registered"></i> 注册地址1</a>
+        <a href="https://dns.he.net" class="register-btn" target="_blank"><i class="fas fa-registered"></i> 注册地址2</a>
+        <a href="https://tunnelbroker.net" class="register-btn" target="_blank"><i class="fas fa-registered"></i> 注册地址3</a>
       </div>
   
       <div class="domain-box">
